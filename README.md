@@ -14,7 +14,7 @@
 
 👤 **Sivert Gullberg Hansen**
 
-* Website: https://sivert.io
+* Website: https://blog.sivert.io
 * Github: [@SivertGullbergHansen](https://github.com/SivertGullbergHansen)
 * LinkedIn: [@https:\/\/www.linkedin.com\/in\/sivertgullberghansen\/](https://linkedin.com/in/https:\/\/www.linkedin.com\/in\/sivertgullberghansen\/)
 
