@@ -1,0 +1,49 @@
+{
+    "participant": [],
+    "stage": [
+        {
+            "id": 0,
+            "tournament_id": 0,
+            "name": "Divisjon 1",
+            "type": "round_robin",
+            "number": 1,
+            "settings": {
+                "size": 2,
+                "groupCount": 2,
+                "roundRobinMode": "simple",
+                "matchesChildCount": 0,
+                "seedOrdering": [
+                    "groups.effort_balanced"
+                ]
+            }
+        }
+    ],
+    "group": [
+        {
+            "id": 0,
+            "stage_id": 0,
+            "number": 1
+        },
+        {
+            "id": 1,
+            "stage_id": 0,
+            "number": 2
+        }
+    ],
+    "round": [
+        {
+            "id": 0,
+            "number": 1,
+            "stage_id": 0,
+            "group_id": 0
+        },
+        {
+            "id": 1,
+            "number": 1,
+            "stage_id": 0,
+            "group_id": 1
+        }
+    ],
+    "match": [],
+    "match_game": []
+}
