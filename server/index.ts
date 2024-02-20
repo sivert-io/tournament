@@ -2,7 +2,7 @@ import { createServer } from "http";
 import { initialize } from "./src/socket.js";
 import { manager } from "./src/utils/brackets/brackets.js";
 
-const PORT = process.env.PORT || 3090;
+const PORT = process.env.PORT ? parseInt(process.env.PORT, 10) : 3090;
 
 const httpServer = createServer();
 

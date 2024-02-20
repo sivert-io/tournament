@@ -15,14 +15,15 @@ class Database {
       username: config.USER,
       password: config.PASSWORD,
       host: config.HOST,
+      port: config.PORT ? parseInt(config.PORT, 10) : 3306,
       dialect: dialect,
       pool: {
         max: config.pool.max,
         min: config.pool.min,
         acquire: config.pool.acquire,
-        idle: config.pool.idle
+        idle: config.pool.idle,
       },
-      models: [Tutorial]
+      models: [Tutorial],
     });
 
     await this.sequelize
