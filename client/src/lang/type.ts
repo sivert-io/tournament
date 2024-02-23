@@ -4,6 +4,7 @@ export type language = {
     next: string;
     not_found: string;
     go_back: string;
+    go_home: string;
   };
   home: {
     relevant_tournaments: string;
@@ -13,12 +14,13 @@ export type language = {
     sign_out: string;
   };
   sidebar: {
+    home: string;
     players: string;
     teams: string;
     tournaments: string;
     my_teams: string;
     my_tournaments: string;
-    recent_matches: string;
+    my_recent_matches: string;
     admin: {
       admin: string;
       create_tournament: string;

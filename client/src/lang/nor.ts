@@ -6,6 +6,7 @@ export const nor: language = {
     next: "Neste",
     not_found: "Fant ingeting",
     go_back: "Gå tilbake",
+    go_home: "Gå hjem",
   },
   home: {
     relevant_tournaments: "Aktuelt for deg",
@@ -15,12 +16,13 @@ export const nor: language = {
     sign_out: "Logg ut",
   },
   sidebar: {
+    home: "Hjem",
     players: "Spillere",
     tournaments: "Turneringer",
     teams: "Lag",
     my_teams: "Mine lag",
-    my_tournaments: "Mine turneringer",
-    recent_matches: "Tidligere kamper",
+    my_tournaments: "Dine turneringer",
+    my_recent_matches: "Dine tidligere kamper",
     admin: {
       admin: "Admin",
       create_tournament: "Lag ny turnering",

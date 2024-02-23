@@ -1,16 +1,21 @@
+"use client";
 import { PageWrapper } from "@/components/PageWrapper/PageWrapper";
 import Title from "@/components/Title/Title";
 import { lang } from "@/lang";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function NotFound() {
+  const router = useRouter();
   return (
     <PageWrapper>
-      <div className="w-full h-full flex flex-col gap-2">
+      <div className="w-full h-full flex flex-col gap-2 items-start justify-start">
         <Title>{lang.generic.not_found}</Title>
-        <Link className="underline underline-offset-2" href="/">
+        <button
+          onClick={() => router.back()}
+          className="px-4 py-2 font-medium text-sm bg-base-2 rounded-lg"
+        >
           {lang.generic.go_back}
-        </Link>
+        </button>
       </div>
     </PageWrapper>
   );

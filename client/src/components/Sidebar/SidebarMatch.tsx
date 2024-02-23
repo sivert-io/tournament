@@ -1,19 +1,15 @@
-import { Team } from "@/types/team";
+"use client";
+import { Match } from "@/types/match";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
-export function SidebarMatch({
-  matchData,
-}: {
-  matchData: {
-    teams: Team[];
-    scores: number[];
-    gameLogo?: string;
-    winner?: number;
-  };
-}) {
+export function SidebarMatch({ matchData }: { matchData: Match }) {
   return (
-    <div className="flex bg-base-3 text-sm text-gray-300 rounded-lg border-2 border-base-4">
+    <Link
+      href={`/matches/${matchData.id}`}
+      className="flex bg-base-3 text-sm text-gray-300 rounded-lg border-2 border-base-4"
+    >
       <div className="flex flex-col gap-4 p-2 w-[75%]">
         {matchData.teams.map((team, i) => (
           <div className="flex justify-between items-center gap-6" key={i}>
@@ -34,9 +30,9 @@ export function SidebarMatch({
         ))}
       </div>
       <div className="h-full w-0 border-r-2 border-base-4" />
-      <div className="flex flex-1 items-center justify-center p-3">
+      <div className="flex flex-1 h-full items-center justify-center p-3">
         <Image src={matchData.gameLogo || ""} alt="" width={48} height={48} />
       </div>
-    </div>
+    </Link>
   );
 }
