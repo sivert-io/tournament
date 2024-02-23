@@ -8,6 +8,7 @@ export type language = {
   };
   home: {
     relevant_tournaments: string;
+    playing_right_now: string;
   };
   user: {
     sign_in: string;

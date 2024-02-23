@@ -10,6 +10,7 @@ export const nor: language = {
   },
   home: {
     relevant_tournaments: "Aktuelt for deg",
+    playing_right_now: "Spilles akkurat nå",
   },
   user: {
     sign_in: "Logg inn med steam",

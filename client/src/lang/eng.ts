@@ -10,6 +10,7 @@ export const eng: language = {
   },
   home: {
     relevant_tournaments: "Relevant for you",
+    playing_right_now: "Playing right now",
   },
   user: {
     sign_in: "Sign in with steam",
