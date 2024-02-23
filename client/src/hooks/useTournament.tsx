@@ -1,13 +1,13 @@
 "use client";
 import { socket } from "@/socket/socket";
-import { Database } from "brackets-manager";
+import { tournaments } from "@/types/tournament";
 import { useEffect, useState } from "react";
 
-function useTournament(tournamentId: number) {
-  const [data, setData] = useState<Database | null | undefined>(undefined);
+function useTournament(tournamentId?: number) {
+  const [data, setData] = useState<tournaments | null | undefined>(undefined);
 
   useEffect(() => {
-    socket.emit("get_all_data", tournamentId, (res: Database) => {
+    socket.emit("get_all_data", tournamentId, (res: tournaments) => {
       setData(res);
     });
   }, [tournamentId]);

@@ -7,12 +7,14 @@ import Link from "next/link";
 import React from "react";
 
 export default function Page() {
+  const tournaments = useTournament();
+
   return (
     <PageWrapper>
       <div className="flex flex-col gap-4">
-        <Title>{lang.navbar.tournaments}</Title>
+        <Title>{lang.sidebar.tournaments}</Title>
 
-        <Link className="underline underline-offset-4" href={`/tournament/0`}>
+        <Link className="underline underline-offset-4" href={`/tournaments/0`}>
           CS2 - NTLAN 2024 Vår
         </Link>
       </div>
