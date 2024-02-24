@@ -19,7 +19,7 @@ export function SidebarTournament({
     >
       <div className="flex flex-col gap-1 p-2 w-[75%]">
         <p className="truncate">{tournamentData.name}</p>
-        {navigator && (
+        {typeof window !== "undefined" && (
           <>
             <p className="text-gray-400">
               {tournamentData.start.toLocaleString(getBrowserLocale(), {
