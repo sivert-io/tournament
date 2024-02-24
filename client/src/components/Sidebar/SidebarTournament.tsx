@@ -9,9 +9,6 @@ export function SidebarTournament({
 }: {
   tournamentData: Tournament;
 }) {
-  const getBrowserLocale = () =>
-    navigator.language || navigator.languages[0] || "en";
-
   return (
     <Link
       href={`/tournaments/${tournamentData.id}`}
@@ -19,21 +16,17 @@ export function SidebarTournament({
     >
       <div className="flex flex-col gap-1 p-2 w-[75%]">
         <p className="truncate">{tournamentData.name}</p>
-        {typeof window !== "undefined" && (
-          <>
-            <p className="text-gray-400">
-              {tournamentData.start.toLocaleString(getBrowserLocale(), {
-                month: "short",
-                day: "numeric",
-              })}{" "}
-              –{" "}
-              {tournamentData.end.toLocaleString(getBrowserLocale(), {
-                month: "short",
-                day: "numeric",
-              })}
-            </p>
-          </>
-        )}
+        <p className="text-gray-400">
+          {tournamentData.start.toLocaleString("en", {
+            month: "short",
+            day: "numeric",
+          })}{" "}
+          –{" "}
+          {tournamentData.end.toLocaleString("en", {
+            month: "short",
+            day: "numeric",
+          })}
+        </p>
       </div>
       <div className="flex flex-1 h-full items-center justify-center p-3">
         <Image

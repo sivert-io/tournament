@@ -3,22 +3,10 @@ import { lang } from "@/lang";
 import React from "react";
 import { SidebarLink } from "./SidebarLink";
 import {
-  RiAuctionFill,
   RiCalendarFill,
-  RiCalendarLine,
-  RiCameraSwitchFill,
-  RiFolderFill,
-  RiGameFill,
-  RiGameLine,
   RiGamepadFill,
-  RiGamepadLine,
   RiGroupFill,
-  RiGroupLine,
-  RiLightbulbFill,
-  RiSettingsFill,
   RiTeamFill,
-  RiTeamLine,
-  RiTrafficLightFill,
 } from "@remixicon/react";
 import { SidebarMatch } from "./SidebarMatch";
 import { SidebarTournament } from "./SidebarTournament";
