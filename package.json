@@ -9,7 +9,7 @@
     "dev:client": "cd client && yarn dev",
     "dev:server": "cd server && yarn dev",
     "dev:api": "cd api && yarn start",
-    "install": "run-p -r install:client install:server install:api",
+    "install": "run-p install:client install:server install:api",
     "install:client": "cd client && yarn",
     "install:server": "cd server && yarn",
     "install:api": "cd api && yarn"
