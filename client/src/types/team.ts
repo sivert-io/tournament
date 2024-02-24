@@ -1,6 +1,5 @@
-import { SteamProfile } from "next-auth-steam";
-
 export interface Team {
+  id: string;
   name: string;
   logoURL?: string;
   //   leader: SteamProfile;

@@ -1,6 +1,13 @@
 import { language } from "./type";
 
 export const eng: language = {
+  table: {
+    player_main_team: "Main team",
+    player_name: "Name",
+    player_rank: "Rank",
+    player_tournament_wins: "Tournament wins",
+    player_tournaments_participated: "Tournaments participated",
+  },
   generic: {
     back: "Back",
     next: "Next",

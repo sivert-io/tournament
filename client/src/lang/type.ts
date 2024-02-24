@@ -1,4 +1,11 @@
 export type language = {
+  table: {
+    player_name: string;
+    player_rank: string;
+    player_main_team: string;
+    player_tournament_wins: string;
+    player_tournaments_participated: string;
+  };
   generic: {
     back: string;
     next: string;

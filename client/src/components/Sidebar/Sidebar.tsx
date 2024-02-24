@@ -15,7 +15,7 @@ import { fakeMatch } from "@/fakeData/match";
 
 export function Sidebar() {
   return (
-    <div className="h-fullbg-base-2 flex flex-col gap-8 p-3 min-w-[300px] max-w-[300px] border-r-2 border-base-4">
+    <div className="h-full bg-base-2 flex flex-col gap-8 p-3 min-w-[300px] max-w-[300px] border-r-2 border-base-4">
       <div className="flex flex-col gap-2">
         <SidebarLink href="/" Icon={RiGamepadFill} ActiveIcon={RiGamepadFill}>
           {lang.sidebar.home}

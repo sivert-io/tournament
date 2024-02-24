@@ -27,7 +27,7 @@ export default function RootLayout({
           <SkeletonTheme baseColor="#222" highlightColor="#888">
             <main className="flex flex-col w-full h-full">
               <Titlebar />
-              <div className="flex w-full h-full">
+              <div className="flex w-full h-full overflow-scroll">
                 <Sidebar />
                 {children}
               </div>
