@@ -36,7 +36,7 @@ export function Table({ data }: { data: PlayerData[] }) {
                   height={24}
                   className="w-6 h-6"
                   alt=""
-                  src={player.main_team.logoURL || "/cs.svg"}
+                  src={player.main_team.logoURL || "/games/cs.svg"}
                 />
                 <span>{player.main_team.name}</span>
               </Link>

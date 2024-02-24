@@ -24,6 +24,7 @@ export const eng: language = {
     sign_out: "Sign out",
   },
   sidebar: {
+    matches: "Matches",
     home: "Home",
     players: "Players",
     tournaments: "Tournaments",

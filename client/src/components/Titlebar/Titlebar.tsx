@@ -4,15 +4,13 @@ import React from "react";
 import { useSteam } from "@/hooks/useSteam";
 import { SignIn } from "../SignIn/SignIn";
 import { NavbarProfile } from "./Profile";
-import { useAdmin } from "@/hooks/useAdmin";
 import Skeleton from "react-loading-skeleton";
 import { RiSearch2Line, RiSettings3Line } from "@remixicon/react";
-import NotificationButton from "../Notification/NotificationButton";
+import Notification from "./Notification";
 
 export function Titlebar() {
   const session = useSession();
   const steam = useSteam();
-  const { isAdmin } = useAdmin();
 
   return (
     <nav
@@ -37,7 +35,7 @@ export function Titlebar() {
 
       {session.status === "authenticated" && steam && (
         <>
-          <NotificationButton />
+          <Notification />
           <button className="p-2 hover:bg-base-1 rounded-lg">
             <RiSettings3Line size={18} color="white" />
           </button>
@@ -47,9 +45,9 @@ export function Titlebar() {
 
       {session.status === "loading" && (
         <>
-          <Skeleton height="100%" containerClassName="w-8 h-8" />
-          <Skeleton height="100%" containerClassName="w-8 h-8" />
-          <Skeleton height="100%" containerClassName="w-[112px] h-9" />
+          <Skeleton height="100%" containerClassName="w-[34px] h-[34px] flex" />
+          <Skeleton height="100%" containerClassName="w-[34px] h-[34px] flex" />
+          <Skeleton height="100%" containerClassName="w-[108px] h-9 flex" />
         </>
       )}
     </nav>

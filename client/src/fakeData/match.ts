@@ -14,5 +14,5 @@ export const fakeMatch: Match = {
       logoURL: "/logo.svg",
     },
   ],
-  gameLogo: "/cs.svg",
+  gameLogo: "/games/cs.svg",
 } as const;

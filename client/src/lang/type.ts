@@ -26,6 +26,7 @@ export type language = {
     players: string;
     teams: string;
     tournaments: string;
+    matches: string;
     my_teams: string;
     my_tournaments: string;
     my_recent_matches: string;

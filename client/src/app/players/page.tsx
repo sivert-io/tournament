@@ -10,7 +10,7 @@ export default function Page() {
     <PageWrapper>
       <div className="flex flex-col gap-4">
         <Title>{lang.sidebar.players}</Title>
-        <div className="overflow-scroll">
+        <div className="w-full overflow-scroll">
           <Table
             data={fakePlayers.sort(
               (a, b) => b.won_tournaments - a.won_tournaments

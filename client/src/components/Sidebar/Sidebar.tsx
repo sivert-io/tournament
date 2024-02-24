@@ -3,10 +3,16 @@ import { lang } from "@/lang";
 import React from "react";
 import { SidebarLink } from "./SidebarLink";
 import {
+  RiArchiveFill,
+  RiArchiveLine,
   RiCalendarFill,
+  RiCalendarLine,
   RiGamepadFill,
+  RiGamepadLine,
   RiGroupFill,
+  RiGroupLine,
   RiTeamFill,
+  RiTeamLine,
 } from "@remixicon/react";
 import { SidebarMatch } from "./SidebarMatch";
 import { SidebarTournament } from "./SidebarTournament";
@@ -17,22 +23,29 @@ export function Sidebar() {
   return (
     <div className="h-full bg-base-2 flex flex-col gap-8 p-3 min-w-[300px] max-w-[300px] border-r-2 border-base-4">
       <div className="flex flex-col gap-2">
-        <SidebarLink href="/" Icon={RiGamepadFill} ActiveIcon={RiGamepadFill}>
+        <SidebarLink href="/" Icon={RiGamepadLine} ActiveIcon={RiGamepadFill}>
           {lang.sidebar.home}
         </SidebarLink>
         <SidebarLink
           href="/tournaments"
-          Icon={RiCalendarFill}
+          Icon={RiCalendarLine}
           ActiveIcon={RiCalendarFill}
         >
           {lang.sidebar.tournaments}
         </SidebarLink>
-        <SidebarLink href="/teams" Icon={RiTeamFill} ActiveIcon={RiTeamFill}>
+        <SidebarLink
+          href="/matches"
+          Icon={RiArchiveLine}
+          ActiveIcon={RiArchiveFill}
+        >
+          {lang.sidebar.matches}
+        </SidebarLink>
+        <SidebarLink href="/teams" Icon={RiTeamLine} ActiveIcon={RiTeamFill}>
           {lang.sidebar.teams}
         </SidebarLink>
         <SidebarLink
           href="/players"
-          Icon={RiGroupFill}
+          Icon={RiGroupLine}
           ActiveIcon={RiGroupFill}
         >
           {lang.sidebar.players}

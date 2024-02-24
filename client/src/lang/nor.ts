@@ -24,6 +24,7 @@ export const nor: language = {
     sign_out: "Logg ut",
   },
   sidebar: {
+    matches: "Kamper",
     home: "Hjem",
     players: "Spillere",
     tournaments: "Turneringer",
