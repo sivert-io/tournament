@@ -21,7 +21,7 @@ export const nor: language = {
   },
   home: {
     relevant_tournaments: "Aktuelt for deg",
-    playing_right_now: "Live nå",
+    playing_right_now: "Kamper som spilles nå",
   },
   user: {
     sign_in: "Logg inn med steam",

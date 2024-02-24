@@ -21,7 +21,7 @@ export const eng: language = {
   },
   home: {
     relevant_tournaments: "Relevant for you",
-    playing_right_now: "Live now",
+    playing_right_now: "Matches being played",
   },
   user: {
     sign_in: "Sign in with steam",
