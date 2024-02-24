@@ -1,6 +1,10 @@
-import { language } from "./type";
+import { language } from "../types/language";
 
 export const eng: language = {
+  notifications: {
+    empty: "You have no alerts",
+    invitation: "You've been invited!",
+  },
   table: {
     player_main_team: "Main team",
     player_name: "Name",
@@ -17,7 +21,7 @@ export const eng: language = {
   },
   home: {
     relevant_tournaments: "Relevant for you",
-    playing_right_now: "Playing right now",
+    playing_right_now: "Live now",
   },
   user: {
     sign_in: "Sign in with steam",

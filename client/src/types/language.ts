@@ -21,6 +21,10 @@ export type language = {
     sign_in: string;
     sign_out: string;
   };
+  notifications: {
+    empty: string;
+    invitation: string;
+  };
   sidebar: {
     home: string;
     players: string;

@@ -6,7 +6,7 @@ import { SignIn } from "../SignIn/SignIn";
 import { NavbarProfile } from "./Profile";
 import Skeleton from "react-loading-skeleton";
 import { RiSearch2Line, RiSettings3Line } from "@remixicon/react";
-import Notification from "./Notification";
+import Notification from "./Notification/Notification";
 
 export function Titlebar() {
   const session = useSession();
@@ -27,7 +27,7 @@ export function Titlebar() {
     "
     >
       <button className="p-2 hover:bg-base-1 rounded-lg">
-        <RiSearch2Line size={18} color="white" />
+        <RiSearch2Line size={20} />
       </button>
       <div className="h-full w-0 border-r-2 border-base-3" />
 
@@ -37,7 +37,7 @@ export function Titlebar() {
         <>
           <Notification />
           <button className="p-2 hover:bg-base-1 rounded-lg">
-            <RiSettings3Line size={18} color="white" />
+            <RiSettings3Line size={20} />
           </button>
           <NavbarProfile steam={steam} />
         </>
@@ -45,8 +45,8 @@ export function Titlebar() {
 
       {session.status === "loading" && (
         <>
-          <Skeleton height="100%" containerClassName="w-[34px] h-[34px] flex" />
-          <Skeleton height="100%" containerClassName="w-[34px] h-[34px] flex" />
+          <Skeleton height="100%" containerClassName="w-9 h-9 flex" />
+          <Skeleton height="100%" containerClassName="w-9 h-9 flex" />
           <Skeleton height="100%" containerClassName="w-[108px] h-9 flex" />
         </>
       )}

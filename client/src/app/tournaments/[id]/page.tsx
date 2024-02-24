@@ -21,7 +21,7 @@ export default function Page({ params }: { params: { id: string } }) {
           href="/tournaments"
           className="px-3 py-2 text-sm font-medium bg-base-2 rounded-lg flex gap-2 items-center justify-center w-fit h-fit"
         >
-          <RiArrowLeftLine size={16} />
+          <RiArrowLeftLine size={20} />
           {lang.generic.back}
         </Link>
         {tournament.stage && (

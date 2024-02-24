@@ -20,9 +20,9 @@ export function SidebarLink({
 
   function GrabIcon() {
     if (isPathActive && ActiveIcon) {
-      return <ActiveIcon size={18} />;
+      return <ActiveIcon size={20} />;
     } else if (Icon) {
-      return <Icon size={18} />;
+      return <Icon size={20} />;
     }
 
     return null;

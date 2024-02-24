@@ -1,6 +1,10 @@
-import { language } from "./type";
+import { language } from "../types/language";
 
 export const nor: language = {
+  notifications: {
+    empty: "Du har ingen varsler",
+    invitation: "Du har blitt invitert!",
+  },
   table: {
     player_main_team: "Team",
     player_name: "Navn",
@@ -17,7 +21,7 @@ export const nor: language = {
   },
   home: {
     relevant_tournaments: "Aktuelt for deg",
-    playing_right_now: "Spilles akkurat nå",
+    playing_right_now: "Live nå",
   },
   user: {
     sign_in: "Logg inn med steam",
