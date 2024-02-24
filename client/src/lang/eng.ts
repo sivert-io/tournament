@@ -22,7 +22,7 @@ export const eng: language = {
     tournaments: "Tournaments",
     teams: "Teams",
     my_teams: "My teams",
-    my_tournaments: "Your tournaments",
+    my_tournaments: "Your live tournaments",
     my_recent_matches: "Your recent matches",
     admin: {
       admin: "Admin",

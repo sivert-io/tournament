@@ -28,7 +28,7 @@ export function SidebarTournament({
           })}
         </p>
       </div>
-      <div className="flex flex-1 h-full items-center justify-center p-3">
+      <div className="flex flex-1 items-center justify-center p-4">
         <Image
           src={tournamentData.gameLogo || ""}
           alt=""

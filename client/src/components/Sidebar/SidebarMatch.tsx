@@ -29,8 +29,8 @@ export function SidebarMatch({ matchData }: { matchData: Match }) {
           </div>
         ))}
       </div>
-      <div className="h-full w-0 border-r-2 border-base-4" />
-      <div className="flex flex-1 h-full items-center justify-center p-3">
+      <div className="flex-1 max-w-[2px] bg-base-4" />
+      <div className="flex flex-1 items-center justify-center p-4">
         <Image src={matchData.gameLogo || ""} alt="" width={48} height={48} />
       </div>
     </Link>

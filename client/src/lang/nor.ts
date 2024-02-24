@@ -22,7 +22,7 @@ export const nor: language = {
     tournaments: "Turneringer",
     teams: "Lag",
     my_teams: "Mine lag",
-    my_tournaments: "Dine turneringer",
+    my_tournaments: "Dine pågående turneringer",
     my_recent_matches: "Dine tidligere kamper",
     admin: {
       admin: "Admin",
