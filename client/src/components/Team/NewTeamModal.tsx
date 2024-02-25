@@ -13,6 +13,7 @@ import {
 
 export function NewTeamModal() {
   const [name, setName] = useState("");
+  const [inviteOnly, setInviteOnly] = useState(false);
   const [slug, setSlug] = useState("");
   const [file, setFile] = useState<File | null>();
   const [fileURL, setFileURL] = useState("");
@@ -81,6 +82,12 @@ export function NewTeamModal() {
           label={lang.teams.label_logo}
         />
       )}
+      <Input
+        type="checkbox"
+        value={inviteOnly}
+        setValue={setInviteOnly}
+        label={lang.teams.invite_only}
+      />
       <Button size="w-full" btnStyle="primary">
         <RiCheckLine size={16} />
         {lang.generic.create}

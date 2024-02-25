@@ -12,6 +12,7 @@ export const eng: language = {
       "Make sure your team name is cool and respectful, and be sure the picture ain't no nonsense! 😉",
     my_teams: "My teams",
     all_teams: "All teams",
+    invite_only: "Joining requires an invitation?",
   },
   notifications: {
     empty: "You have no alerts",

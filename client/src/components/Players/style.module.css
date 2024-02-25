@@ -15,7 +15,7 @@
 }
 
 .table tr:nth-child(even) {
-  background: #00000025;
+  background: #00000050;
 }
 
 .table tr:hover {

@@ -6,11 +6,15 @@ import "react-loading-skeleton/dist/skeleton.css";
 import { Sidebar } from "@/components/Sidebar/Sidebar";
 import { SkeletonTheme } from "react-loading-skeleton";
 import Head from "next/head";
+import { Metadata } from "next";
 
 const inter = Space_Grotesk({ subsets: ["latin"] });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Tournament",
+  icons: {
+    icon: "/logo.svg",
+  },
 };
 
 export default function RootLayout({
@@ -20,9 +24,6 @@ export default function RootLayout({
 }) {
   return (
     <html className="bg-base-1 text-white" lang="en">
-      <Head>
-        <link rel="icon" href="/logo.svg" sizes="any" />
-      </Head>
       <body className={`${inter.className} w-screen h-screen`}>
         <NextAuthSessionProvider>
           <SkeletonTheme baseColor="#222" highlightColor="#888">

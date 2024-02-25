@@ -16,6 +16,7 @@ export type language = {
     label_remove_logo: string;
     my_teams: string;
     all_teams: string;
+    invite_only: string;
   };
   generic: {
     back: string;

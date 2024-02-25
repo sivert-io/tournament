@@ -12,6 +12,7 @@ export const nor: language = {
       "Pass på at lagnavnet er kult og respektfullt, og vær sikker på at bildet ikke er noe tull! 😉",
     my_teams: "Mine lag",
     all_teams: "Alle lag",
+    invite_only: "Invitasjon kreves for å bli med?",
   },
   notifications: {
     empty: "Du har ingen varsler",
