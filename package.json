@@ -5,7 +5,7 @@
   "author": "Hansen, Sivert Gullberg <sivert-gullberg.hansen@norsk-tipping.no>",
   "license": "MIT",
   "scripts": {
-    "dev": "run-p -r dev:client dev:server dev:api",
+    "dev": "run-p dev:client dev:server dev:api",
     "dev:client": "cd client && yarn dev",
     "dev:server": "cd server && yarn dev",
     "dev:api": "cd api && yarn start",
