@@ -1,6 +1,16 @@
 import { language } from "../types/language";
 
 export const nor: language = {
+  teams: {
+    create_new_team: "Nytt lag",
+    label_name: "Navn",
+    label_slug: "Forkortelse",
+    label_logo: "Logo",
+    label_remove_logo: "Fjern bildet",
+    rules_title: "Regler",
+    rules_description:
+      "Pass på at lagnavnet er kult og respektfullt, og vær sikker på at bildet ikke er noe tull! 😉",
+  },
   notifications: {
     empty: "Du har ingen varsler",
     invitation: "Du har blitt invitert!",
@@ -18,6 +28,10 @@ export const nor: language = {
     not_found: "Fant ingeting",
     go_back: "Gå tilbake",
     go_home: "Gå hjem",
+    accept: "Godkjenn",
+    cancel: "Avbryt",
+    decline: "Avvis",
+    create: "Lagre",
   },
   home: {
     relevant_tournaments: "Aktuelt for deg",

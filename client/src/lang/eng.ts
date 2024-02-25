@@ -1,6 +1,16 @@
 import { language } from "../types/language";
 
 export const eng: language = {
+  teams: {
+    create_new_team: "New team",
+    label_name: "Name",
+    label_slug: "Abbreviation",
+    label_logo: "Logo",
+    rules_title: "Rules",
+    label_remove_logo: "Remove image",
+    rules_description:
+      "Make sure your team name is cool and respectful, and be sure the picture ain't no nonsense! 😉",
+  },
   notifications: {
     empty: "You have no alerts",
     invitation: "You've been invited!",
@@ -18,6 +28,10 @@ export const eng: language = {
     not_found: "Could not find any tournament",
     go_back: "Go back",
     go_home: "Go home",
+    accept: "Accept",
+    cancel: "Cancel",
+    decline: "Decline",
+    create: "Create",
   },
   home: {
     relevant_tournaments: "Relevant for you",

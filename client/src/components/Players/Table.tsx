@@ -29,7 +29,7 @@ export function Table({ data }: { data: PlayerData[] }) {
             <td>
               <Link
                 className="flex gap-2 items-center"
-                href={`/teams/${player.main_team.id}`}
+                href={`/teams/${player.main_team.slug}`}
               >
                 <Image
                   width={24}

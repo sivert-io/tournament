@@ -1,5 +1,5 @@
 export interface Team {
-  id: string;
+  slug: string;
   name: string;
   logoURL?: string;
   //   leader: SteamProfile;

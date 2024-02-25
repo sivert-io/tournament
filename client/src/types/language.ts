@@ -6,12 +6,25 @@ export type language = {
     player_tournament_wins: string;
     player_tournaments_participated: string;
   };
+  teams: {
+    create_new_team: string;
+    label_name: string;
+    label_slug: string;
+    label_logo: string;
+    rules_title: string;
+    rules_description: string;
+    label_remove_logo: string;
+  };
   generic: {
     back: string;
     next: string;
     not_found: string;
     go_back: string;
     go_home: string;
+    cancel: string;
+    accept: string;
+    decline: string;
+    create: string;
   };
   home: {
     relevant_tournaments: string;
