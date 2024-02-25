@@ -8,8 +8,6 @@
 
 > Tournament is a complete tournament management tool, which includes a web interface for displaying and managing tournaments, teams, players, etc. The project consists of three parts: a front end (NextJs), a websocket (socket.io) and an API (expressJs).
 
-### 🏠 [Homepage](tournament.sivert.io)
-
 ## Author
 
 👤 **Sivert Gullberg Hansen**
