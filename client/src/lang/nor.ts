@@ -10,6 +10,8 @@ export const nor: language = {
     rules_title: "Regler",
     rules_description:
       "Pass på at lagnavnet er kult og respektfullt, og vær sikker på at bildet ikke er noe tull! 😉",
+    my_teams: "Mine lag",
+    all_teams: "Alle lag",
   },
   notifications: {
     empty: "Du har ingen varsler",

@@ -4,6 +4,10 @@ import Title from "@/components/Title/Title";
 import { lang } from "@/lang";
 import React from "react";
 
+export const metadata = {
+  title: `Tournament - ${lang.teams.create_new_team}`,
+};
+
 export default function Page() {
   return (
     <PageWrapper>

@@ -14,6 +14,8 @@ export type language = {
     rules_title: string;
     rules_description: string;
     label_remove_logo: string;
+    my_teams: string;
+    all_teams: string;
   };
   generic: {
     back: string;

@@ -10,6 +10,8 @@ export const eng: language = {
     label_remove_logo: "Remove image",
     rules_description:
       "Make sure your team name is cool and respectful, and be sure the picture ain't no nonsense! 😉",
+    my_teams: "My teams",
+    all_teams: "All teams",
   },
   notifications: {
     empty: "You have no alerts",

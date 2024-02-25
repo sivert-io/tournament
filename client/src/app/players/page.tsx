@@ -5,6 +5,10 @@ import { fakePlayers } from "@/fakeData/players";
 import { lang } from "@/lang";
 import React from "react";
 
+export const metadata = {
+  title: `Tournament - ${lang.sidebar.players}`,
+};
+
 export default function Page() {
   return (
     <PageWrapper>
