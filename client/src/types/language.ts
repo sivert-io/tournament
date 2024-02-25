@@ -17,6 +17,8 @@ export type language = {
     my_teams: string;
     all_teams: string;
     invite_only: string;
+    border_color: string;
+    use_border: string;
   };
   generic: {
     back: string;

@@ -13,6 +13,8 @@ export const eng: language = {
     my_teams: "My teams",
     all_teams: "All teams",
     invite_only: "Joining requires an invitation?",
+    use_border: "Enable border?",
+    border_color: "Border color",
   },
   notifications: {
     empty: "You have no alerts",

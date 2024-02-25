@@ -13,6 +13,8 @@ export const nor: language = {
     my_teams: "Mine lag",
     all_teams: "Alle lag",
     invite_only: "Invitasjon kreves for å bli med?",
+    use_border: "Bruk kantfarge?",
+    border_color: "Kantfarge",
   },
   notifications: {
     empty: "Du har ingen varsler",

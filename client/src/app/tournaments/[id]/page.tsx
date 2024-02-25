@@ -10,7 +10,7 @@ import Link from "next/link";
 
 export default function Page({ params }: { params: { id: string } }) {
   const tournaments = useTournament();
-  const tournament = tournaments[parseInt(params.id, 2)];
+  const tournament = tournaments[parseInt(params.id)];
 
   if (!tournament) return <NotFound />;
 

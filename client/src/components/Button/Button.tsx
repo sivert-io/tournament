@@ -23,7 +23,7 @@ export function Button({
         return "bg-primary border-2 border-transparent";
 
       default:
-        return "bg-base-3 border-2 border-base-4";
+        return "bg-base-2 border-2 border-base-4";
     }
   };
   const className = `${

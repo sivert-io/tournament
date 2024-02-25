@@ -15,7 +15,7 @@ export default function Page() {
         <Title>{lang.teams.create_new_team}</Title>
         <div className="flex gap-4">
           <NewTeamModal />
-          <div className="flex flex-col gap-1 p-4 bg-base-3 border-2 border-base-4 rounded-lg w-64">
+          <div className="flex flex-col gap-1 p-4 bg-base-3 border-2 border-base-4 rounded-lg w-72">
             <h2 className="font-medium text-sm">{lang.teams.rules_title}</h2>
             <p className="text-sm">{lang.teams.rules_description}</p>
           </div>
