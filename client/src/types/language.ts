@@ -19,6 +19,7 @@ export type language = {
     invite_only: string;
     border_color: string;
     use_border: string;
+    preview: string;
   };
   generic: {
     back: string;

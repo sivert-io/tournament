@@ -15,6 +15,7 @@ export const nor: language = {
     invite_only: "Krever invitasjon for å bli med",
     use_border: "Bruk kantfarge?",
     border_color: "Kantfarge",
+    preview: "Forhåndsvisning",
   },
   notifications: {
     empty: "Du har ingen varsler",

@@ -15,6 +15,7 @@ export const eng: language = {
     invite_only: "Invite required",
     use_border: "Enable border?",
     border_color: "Border color",
+    preview: "Preview",
   },
   notifications: {
     empty: "You have no alerts",

@@ -10,6 +10,7 @@ export default function ImageCropper({
   setZoom,
   borderColor,
   useBorder,
+  onCropComplete,
 }: {
   image: string;
   crop: any;
@@ -18,8 +19,8 @@ export default function ImageCropper({
   setZoom: (e: number) => any;
   borderColor: RGBColor;
   useBorder: boolean;
+  onCropComplete: (croppedArea: any, croppedAreaPixels: any) => any;
 }) {
-  const onCropComplete = (croppedArea: any, croppedAreaPixels: any) => {};
   return (
     <>
       <style key="cropStyle">{`.reactEasyCrop_Container {
@@ -98,7 +99,7 @@ export default function ImageCropper({
         disableAutomaticStylesInjection
         classes={{
           cropAreaClassName: `text-base-3 rounded-full ${
-            useBorder ? "border-4" : ""
+            useBorder ? "border-2" : ""
           }`,
         }}
         style={{
