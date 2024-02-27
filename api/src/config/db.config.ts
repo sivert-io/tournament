@@ -1,4 +1,6 @@
+import { configDotenv } from "dotenv";
 import { Dialect } from "sequelize";
+configDotenv();
 
 export const config = {
   HOST: process.env.DB_HOST,
