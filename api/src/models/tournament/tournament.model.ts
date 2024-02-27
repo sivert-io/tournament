@@ -1,32 +1,26 @@
 import { Model, Table, Column, DataType } from "sequelize-typescript";
 
 @Table({
-  tableName: "tutorials",
+  tableName: "tournaments",
 })
-export default class Tutorial extends Model {
+export class Tournament extends Model {
   @Column({
     type: DataType.INTEGER,
     primaryKey: true,
     autoIncrement: true,
-    field: "id"
+    field: "id",
   })
   id?: number;
 
   @Column({
     type: DataType.STRING(255),
-    field: "title"
+    field: "name",
   })
-  title?: string;
+  name?: string;
 
   @Column({
     type: DataType.STRING(255),
-    field: "description"
+    field: "type",
   })
-  description?: string;
-
-  @Column({
-    type: DataType.BOOLEAN,
-    field: "published"
-  })
-  published?: boolean;
+  type?: string;
 }

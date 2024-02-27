@@ -1,9 +1,10 @@
 import { Model, Table, Column, DataType } from "sequelize-typescript";
+import { User } from "../user/user.model";
 
 @Table({
   tableName: "teams",
 })
-export default class Team extends Model {
+export class Team extends Model {
   @Column({
     type: DataType.INTEGER,
     primaryKey: true,
@@ -13,16 +14,14 @@ export default class Team extends Model {
   id?: number;
 
   @Column({
-    type: DataType.STRING(255),
+    type: DataType.INTEGER,
     field: "owner",
+    references: {
+      model: User,
+      key: "id",
+    },
   })
-  owner?: string;
-
-  @Column({
-    type: DataType.STRING(255),
-    field: "members",
-  })
-  members?: string;
+  owner?: number;
 
   @Column({
     type: DataType.STRING(255),
