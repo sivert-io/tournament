@@ -9,6 +9,6 @@ export interface Team {
     color: RGBColor;
   };
   logoURL?: string;
-  leader?: SteamProfile;
+  owner?: SteamProfile;
   members?: SteamProfile[];
 }

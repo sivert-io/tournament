@@ -1,3 +1,5 @@
+import { Dialect } from "sequelize";
+
 export const config = {
   HOST: process.env.DB_HOST,
   PORT: process.env.DB_PORT,
@@ -12,4 +14,4 @@ export const config = {
   },
 };
 
-export const dialect = "mysql";
+export const dialect: Dialect = "mysql";

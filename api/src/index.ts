@@ -2,6 +2,8 @@ import express, { Application } from "express";
 import cors, { CorsOptions } from "cors";
 import Routes from "./routes";
 import Database from "./db";
+import bearerToken from "express-bearer-token";
+import { authorizeRequest } from "./utils/authorize";
 
 export default class Server {
   constructor(app: Application) {
@@ -18,6 +20,8 @@ export default class Server {
     app.use(cors(corsOptions));
     app.use(express.json());
     app.use(express.urlencoded({ extended: true }));
+    app.use(bearerToken());
+    app.use(authorizeRequest);
   }
 
   private syncDatabase(): void {

@@ -10,7 +10,7 @@ initialize(httpServer);
 
 httpServer.listen(PORT);
 
-console.log(`Server running at localhost:${PORT}`);
+console.log(`Websocket accessible on port ${PORT}`);
 const tourney = await manager.get.tournamentData(0);
 
 if (tourney.stage.length === 0) {

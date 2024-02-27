@@ -6,11 +6,11 @@ import Server from "./src/index";
 
 const app: Application = express();
 new Server(app);
-const PORT: number = process.env.PORT ? parseInt(process.env.PORT, 10) : 8080;
+const PORT: number = process.env.PORT ? parseInt(process.env.PORT, 10) : 8888;
 
 app
   .listen(PORT, "localhost", function () {
-    console.log(`Server is running on port ${PORT}.`);
+    console.log(`API accessible on port ${PORT}.`);
   })
   .on("error", (err: any) => {
     if (err.code === "EADDRINUSE") {
