@@ -48,6 +48,7 @@ export function NewTeamModal() {
     colors.primary,
   ]);
   const [useBorder, setUseBorder] = useState(false);
+  const [borderThickness, setBorderThickness] = useState(2);
 
   const [crop, setCrop] = useState({ x: 0, y: 0 });
   const [zoom, setZoom] = useState(1);
@@ -92,6 +93,12 @@ export function NewTeamModal() {
         name,
         slug,
         logoURL: croppedImage,
+        border: useBorder
+          ? {
+              color: borderColor,
+              thickness: 2,
+            }
+          : undefined,
       },
       fakeTeam1,
     ],
@@ -139,6 +146,7 @@ export function NewTeamModal() {
               <p className="font-medium text-sm">{lang.teams.label_logo}</p>
               <div className="relative h-32 w-full">
                 <ImageCropper
+                  borderThickness={borderThickness}
                   useBorder={useBorder}
                   borderColor={borderColor}
                   crop={crop}
@@ -161,7 +169,8 @@ export function NewTeamModal() {
                   <RiCloseLine size={16} />
                   {lang.teams.label_remove_logo}
                 </Button>
-                <input
+                <Input
+                  label={lang.teams.logo_zoom}
                   type="range"
                   value={zoom}
                   min={1}
@@ -196,7 +205,7 @@ export function NewTeamModal() {
         </Card>
         {fileURL && (
           <Card>
-            <div className="flex flex-col gap-1">
+            <div className="flex flex-col gap-2">
               <p className="font-medium">{lang.teams.border_color}</p>
               <Input
                 type="checkbox"
@@ -205,13 +214,27 @@ export function NewTeamModal() {
                 label={lang.teams.use_border}
               />
               {useBorder && (
-                <SketchPicker
-                  color={borderColor}
-                  onChange={(color) => setBorderColor(color.rgb)}
-                  presetColors={suggestedColors}
-                  width="256"
-                  className="text-black"
-                />
+                <div className="flex flex-col gap-4">
+                  <SketchPicker
+                    color={borderColor}
+                    onChange={(color) => setBorderColor(color.rgb)}
+                    presetColors={suggestedColors}
+                    width="256"
+                    className="text-black"
+                  />
+
+                  <Input
+                    label={lang.teams.border_thickness}
+                    type="range"
+                    value={borderThickness}
+                    min={1}
+                    max={6}
+                    step={1}
+                    onChange={(e) => {
+                      setBorderThickness(parseInt(e.target.value));
+                    }}
+                  />
+                </div>
               )}
             </div>
           </Card>

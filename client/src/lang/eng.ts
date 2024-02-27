@@ -15,6 +15,8 @@ export const eng: language = {
     invite_only: "Invite required",
     use_border: "Enable border?",
     border_color: "Border color",
+    border_thickness: "Border thickness",
+    logo_zoom: "Zoom",
     preview: "Preview",
   },
   notifications: {

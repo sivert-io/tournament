@@ -20,6 +20,8 @@ export type language = {
     border_color: string;
     use_border: string;
     preview: string;
+    logo_zoom: string;
+    border_thickness: string;
   };
   generic: {
     back: string;

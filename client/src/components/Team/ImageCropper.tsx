@@ -3,6 +3,7 @@ import { RGBColor } from "react-color";
 import Cropper, { Point } from "react-easy-crop";
 
 export default function ImageCropper({
+  borderThickness,
   image,
   crop,
   zoom,
@@ -12,6 +13,7 @@ export default function ImageCropper({
   useBorder,
   onCropComplete,
 }: {
+  borderThickness: number;
   image: string;
   crop: any;
   zoom: any;
@@ -104,9 +106,9 @@ export default function ImageCropper({
         }}
         style={{
           cropAreaStyle: {
-            borderColor:
-              `rgba(${borderColor.r},${borderColor.g},${borderColor.b},${borderColor.a})` ||
-              "black",
+            border: useBorder
+              ? `${borderThickness}px solid rgba(${borderColor.r},${borderColor.g},${borderColor.b},${borderColor.a})`
+              : undefined,
           },
         }}
         cropShape="round"
