@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { get, register } from "../controllers/user.controller";
+import { getAll, registerNewUser } from "../controllers/user.controller";
 
 class Routes {
   router = Router();
@@ -9,8 +9,8 @@ class Routes {
   }
 
   intializeRoutes() {
-    this.router.post("/register", register);
-    this.router.get("/", get);
+    this.router.post("/register", registerNewUser);
+    this.router.get("/", getAll);
   }
 }
 

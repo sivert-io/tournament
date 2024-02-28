@@ -5,7 +5,6 @@ import { Titlebar } from "@/components/Titlebar/Titlebar";
 import "react-loading-skeleton/dist/skeleton.css";
 import { Sidebar } from "@/components/Sidebar/Sidebar";
 import { SkeletonTheme } from "react-loading-skeleton";
-import Head from "next/head";
 import { Metadata } from "next";
 
 const inter = Space_Grotesk({ subsets: ["latin"] });

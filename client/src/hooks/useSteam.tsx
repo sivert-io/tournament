@@ -1,3 +1,4 @@
+import { socket } from "@/socket/socket";
 import { SteamProfile } from "next-auth-steam";
 import { useSession } from "next-auth/react";
 import { useEffect, useState } from "react";
@@ -8,7 +9,9 @@ function useSteam() {
 
   useEffect(() => {
     if (steam === null && session.data) {
-      setSteam((session.data.user as any).steam);
+      const data: SteamProfile = (session.data.user as any).steam;
+      setSteam(data);
+      socket.emit("registerUser", data);
     }
   }, [session.data, steam]);
 

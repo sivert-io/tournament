@@ -1,6 +1,5 @@
 import { PageWrapper } from "@/components/PageWrapper/PageWrapper";
 import Title from "@/components/Title/Title";
-import { useSteam } from "@/hooks/useSteam";
 import { lang } from "@/lang";
 
 export default function Home() {

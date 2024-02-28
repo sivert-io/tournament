@@ -1,3 +1,4 @@
+"use client";
 import { socket } from "@/socket/socket";
 import { useEffect, useState } from "react";
 import { useSteam } from "./useSteam";
