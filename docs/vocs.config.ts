@@ -7,8 +7,21 @@ export default defineConfig({
       link: "/getting-started",
     },
     {
-      text: "Example",
-      link: "/example",
+      text: "API",
+      items: [
+        {
+          text: "Gettings Started",
+          link: "/api/getting-started",
+        },
+      ],
+    },
+    {
+      text: "Server",
+      items: [],
+    },
+    {
+      text: "Client",
+      items: [],
     },
   ],
   logoUrl: {
