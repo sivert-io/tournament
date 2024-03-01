@@ -1,6 +1,12 @@
 import { language } from "../types/language";
 
 export const nor: language = {
+  player: {
+    time_played: "Tid spilt",
+    hours: "timer",
+    rating: "Rang",
+  },
+
   teams: {
     create_new_team: "Nytt lag",
     label_name: "Navn",

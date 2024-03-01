@@ -1,4 +1,9 @@
 export type language = {
+  player: {
+    rating: string;
+    time_played: string;
+    hours: string;
+  },
   table: {
     player_name: string;
     player_rank: string;

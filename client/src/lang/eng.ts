@@ -1,6 +1,11 @@
 import { language } from "../types/language";
 
 export const eng: language = {
+  player: {
+    time_played: "Time played",
+    hours: "hours",
+    rating: "Rating",
+  },
   teams: {
     create_new_team: "New team",
     label_name: "Name",

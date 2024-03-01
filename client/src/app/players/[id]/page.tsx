@@ -1,14 +1,16 @@
 "use client";
 import NotFound from "@/app/not-found";
-import { PageWrapper } from "@/components/PageWrapper/PageWrapper";
-import Title from "@/components/Title/Title";
+import PlayerBanner from "@/components/Players/Player/PlayerBanner";
+import { PlayerStats } from "@/types/stats";
 import axios from "axios";
 import { SteamProfile } from "next-auth-steam";
 import { useEffect, useState } from "react";
-import Skeleton from "react-loading-skeleton";
 
 export default function Page({ params }: { params: { id: string } }) {
   const [steam, setSteam] = useState<SteamProfile | undefined | null>(
+    undefined
+  );
+  const [gameStats, setGameStats] = useState<PlayerStats | undefined>(
     undefined
   );
 
@@ -16,13 +18,20 @@ export default function Page({ params }: { params: { id: string } }) {
     axios.get(`/api/steam/player/${params.id}`).then((res) => {
       setSteam(res.data);
     });
+    axios.get(`/api/steam/player/game/${params.id}`).then((res) => {
+      setGameStats(res.data);
+    });
   }, [params]);
 
   if (steam === null) return <NotFound />;
 
   return (
-    <PageWrapper>
-      {steam ? <Title>{steam.personaname}</Title> : <Skeleton />}
-    </PageWrapper>
+    <div className="flex flex-col w-full">
+      <PlayerBanner
+        avatarURL={steam?.avatarfull}
+        name={steam?.personaname}
+        stats={gameStats}
+      />
+    </div>
   );
 }

@@ -1,39 +1,18 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { Button } from "../Button/Button";
+import { Button } from "../../Button/Button";
 import { lang } from "@/lang";
-import { Input } from "../Input/Input";
-import ImageCropper from "./ImageCropper";
+import { Input } from "../../Input/Input";
+import ImageCropper from "../ImageCropper";
 import { RiCheckLine, RiCloseLine } from "@remixicon/react";
-import { colors } from "@/utils/colors";
-import Card from "../Card/Card";
+import { colors, convertHex } from "@/utils/colors";
+import Card from "../../Card/Card";
 import { RGBColor, SketchPicker } from "react-color";
 import { extractColors } from "extract-colors";
-import { SidebarMatch } from "../Sidebar/SidebarMatch";
+import { SidebarMatch } from "../../Sidebar/SidebarMatch";
 import { Match } from "@/types/match";
 import { fakeTeam1 } from "@/fakeData/team";
 import getCroppedImg from "@/utils/image";
-
-function convertHex(hexCode: string, opacity = 1) {
-  let hex = hexCode.replace("#", "");
-  if (hex.length === 3) {
-    hex = hex[0] + hex[0] + hex[1] + hex[1] + hex[2] + hex[2];
-  }
-  const r = parseInt(hex.substring(0, 2), 16),
-    g = parseInt(hex.substring(2, 4), 16),
-    b = parseInt(hex.substring(4, 6), 16);
-  /* Backward compatibility for whole number based opacity values. */
-  if (opacity > 1 && opacity <= 100) {
-    opacity = opacity / 100;
-  }
-  const rgba: RGBColor = {
-    r,
-    g,
-    b,
-    a: opacity,
-  };
-  return rgba;
-}
 
 export function NewTeamModal() {
   const [name, setName] = useState("");
