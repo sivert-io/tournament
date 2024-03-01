@@ -1,45 +1,42 @@
-<h1 align="center">Welcome to Tournament 👋</h1>
+<br/>
+
+<p align="center">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="docs/docs/public/logo-dark.svg">
+      <img alt="Tournament logo" src="docs/docs/public/logo-light.svg" width="auto" height="40">
+    </picture>
+</p>
+
+<p align="center">
+  Complete tournament hosting solution<br />
+  Powered by <b>NextJs</b> • <b>Socket.io</b> • <b>Express</b>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-0.0.1-blue.svg?cacheSeconds=2592000" />
-  <a href="LICENSE" target="_blank">
-    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
+
+<p align="center">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/badge/version-0.0.1-black.svg?colorA=21262d&colorB=21262d&style=flat">
+      <img alt="Version" src="https://img.shields.io/badge/version-0.0.1-black.svg?colorA=f6f8fa&colorB=f6f8fa&style=flat" />
+    </picture>
+  <a href="LICENSE">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/badge/license-MIT-blue?colorA=21262d&colorB=21262d&style=flat">
+      <img src="https://img.shields.io/badge/license-MIT-blue?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="MIT License">
+    </picture>
   </a>
 </p>
 
-> Tournament is a complete tournament management tool, which includes a web interface for displaying and managing tournaments, teams, players, etc. The project consists of three parts: a front end (NextJs), a websocket (socket.io) and an API (expressJs).
+## Documentation
 
-## Install
+[Head to the documentation](https://tournament.sivert.io/) to read and learn more about Tournament.
 
-```sh
-yarn install
-```
+## Contributing
 
-## Usage
+If you're interested in contributing, please read the [contributing docs](/.github/CONTRIBUTING.md) **before submitting a pull request**.
 
-```sh
-yarn dev
-```
+## Authors
 
-## Author
+- [@Sivert](https://github.com/SivertGullbergHansen)
 
-👤 **Sivert Gullberg Hansen**
+## License
 
-* Website: <https://blog.sivert.io>
-* Github: [@SivertGullbergHansen](https://github.com/SivertGullbergHansen)
-* LinkedIn: [@sivertgullberghansen](https://linkedin.com/in/sivertgullberghansen)
-
-## 🤝 Contributing
-
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/SivertGullbergHansen/tournament/issues).
-
-## Show your support
-
-Give a ⭐️ if this project helped you!
-
-## 📝 License
-
-Copyright © 2024 [Sivert Gullberg Hansen](https://github.com/SivertGullbergHansen).<br />
-This project is [MIT](https://github.com/SivertGullbergHansen/tournament/blob/main/LICENSE) licensed.
-
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
+[MIT](/LICENSE) License
