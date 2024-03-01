@@ -5,14 +5,16 @@
   "author": "Hansen, Sivert Gullberg <sivert-gullberg.hansen@norsk-tipping.no>",
   "license": "MIT",
   "scripts": {
-    "dev": "run-p -l dev:client dev:server dev:api",
-    "install": "run-p -l install:client install:server install:api",
+    "dev": "run-p -l dev:client dev:server dev:api dev:docs",
+    "install": "run-p -l install:client install:server install:api install:docs",
     "dev:client": "cd client && yarn dev",
     "dev:server": "cd server && yarn dev",
     "dev:api": "cd api && yarn dev",
+    "dev:docs": "cd docs && yarn dev",
     "install:client": "cd client && yarn",
     "install:server": "cd server && yarn",
-    "install:api": "cd api && yarn"
+    "install:api": "cd api && yarn",
+    "install:docs": "cd docs && yarn"
   },
   "devDependencies": {
     "npm-run-all": "^4.1.5"
