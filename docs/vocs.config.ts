@@ -15,6 +15,7 @@ export default defineConfig({
     light: "/logo-light.svg",
     dark: "/logo-dark.svg",
   },
+  iconUrl: "/logo.svg",
   title: "Tournament",
   titleTemplate: "%s – Tournament",
 });
