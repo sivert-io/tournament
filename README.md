@@ -30,7 +30,7 @@ yarn dev
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](issues).
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/SivertGullbergHansen/tournament/issues).
 
 ## Show your support
 
@@ -39,7 +39,7 @@ Give a ⭐️ if this project helped you!
 ## 📝 License
 
 Copyright © 2024 [Sivert Gullberg Hansen](https://github.com/SivertGullbergHansen).<br />
-This project is [MIT](LICENSE) licensed.
+This project is [MIT](https://github.com/SivertGullbergHansen/tournament/blob/main/LICENSE) licensed.
 
 ***
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
