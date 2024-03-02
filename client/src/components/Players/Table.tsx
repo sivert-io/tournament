@@ -4,6 +4,7 @@ import React, { useMemo } from "react";
 import { Table as AntTable, TableColumnsType } from "antd";
 import Image from "next/image";
 import Link from "next/link";
+import { lang } from "@/lang";
 
 type dataType = {
   key: number;
@@ -17,13 +18,13 @@ type dataType = {
 
 const columns: TableColumnsType<dataType> = [
   {
-    title: "Rank",
+    title: lang.table.player_rank,
     dataIndex: "key",
     key: "rank",
     width: "1%",
   },
   {
-    title: "Name",
+    title: lang.table.player_name,
     dataIndex: "name",
     key: "name",
     width: "15%",
@@ -33,7 +34,7 @@ const columns: TableColumnsType<dataType> = [
     ),
   },
   {
-    title: "Team",
+    title: lang.table.player_main_team,
     dataIndex: "team",
     key: "team",
     width: "15%",
@@ -55,14 +56,14 @@ const columns: TableColumnsType<dataType> = [
     ),
   },
   {
-    title: "Total kills",
+    title: lang.table.player_kills,
     dataIndex: "total_kills",
     key: "total_kills",
     width: "15%",
     sorter: (a: any, b: any) => a.total_kills - b.total_kills,
   },
   {
-    title: "Headshot percentage",
+    title: lang.table.player_headshot_percentage,
     dataIndex: "headshot_p",
     key: "headshot_p",
     width: "15%",
@@ -70,7 +71,7 @@ const columns: TableColumnsType<dataType> = [
     sorter: (a: any, b: any) => a.headshot_p - b.headshot_p,
   },
   {
-    title: "Tournament wins",
+    title: lang.table.player_tournament_wins,
     dataIndex: "won_tournaments",
     key: "won_tournaments",
     width: "15%",

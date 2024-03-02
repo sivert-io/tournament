@@ -3,11 +3,13 @@ export type language = {
     rating: string;
     time_played: string;
     hours: string;
-  },
+  };
   table: {
     player_name: string;
     player_rank: string;
     player_main_team: string;
+    player_kills: string;
+    player_headshot_percentage: string;
     player_tournament_wins: string;
     player_tournaments_participated: string;
   };

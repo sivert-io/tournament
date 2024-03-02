@@ -34,6 +34,8 @@ export const eng: language = {
     player_rank: "Rank",
     player_tournament_wins: "Tournament wins",
     player_tournaments_participated: "Tournaments participated",
+    player_headshot_percentage: "Headshot percentage",
+    player_kills: "Total kills",
   },
   generic: {
     back: "Back",

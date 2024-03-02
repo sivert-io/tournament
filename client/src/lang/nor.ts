@@ -33,8 +33,10 @@ export const nor: language = {
     player_main_team: "Team",
     player_name: "Navn",
     player_rank: "Plass",
-    player_tournament_wins: "Turneringer vunnet",
+    player_tournament_wins: "Turneringsseire",
     player_tournaments_participated: "Turneringer deltatt",
+    player_kills: "Totalt antall drap",
+    player_headshot_percentage: "Prosentandel hodeskudd",
   },
   generic: {
     back: "Tilbake",
