@@ -51,19 +51,19 @@ export function Sidebar() {
           {lang.sidebar.players}
         </SidebarLink>
       </div>
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-2">
         <h2 className="px-2 font-medium text-sm text-gray-400">
           {lang.sidebar.my_tournaments}
         </h2>
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-4">
           <SidebarTournament tournamentData={fakeTournament} />
         </div>
       </div>
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-2">
         <h2 className="px-2 font-medium text-sm text-gray-400">
           {lang.sidebar.my_recent_matches}
         </h2>
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-4">
           <SidebarMatch matchData={fakeMatch} />
         </div>
       </div>

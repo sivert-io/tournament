@@ -1,5 +1,6 @@
 "use client";
 import { Tournament } from "@/types/tournament";
+import { useTheme } from "antd-style";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -9,10 +10,18 @@ export function SidebarTournament({
 }: {
   tournamentData: Tournament;
 }) {
+  const theme = useTheme();
+  const cardStyle: React.CSSProperties = {
+    background: theme.colorBgElevated,
+    border: "1px solid " + theme.colorBorder,
+    color: theme.colorTextBase,
+  };
+  const className = "flex text-sm rounded-lg";
   return (
     <Link
       href={`/tournaments/${tournamentData.id}`}
-      className="flex justify-between bg-base-3 text-sm text-gray-300 rounded-lg border-2 border-base-4"
+      className={className}
+      style={cardStyle}
     >
       <div className="flex flex-col gap-1 p-2 w-[75%]">
         <p className="truncate">{tournamentData.name}</p>

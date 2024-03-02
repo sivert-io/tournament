@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ant-design/nextjs-registry": "^1.0.0",
     "@lobehub/ui": "^1.129.2",
     "@remixicon/react": "^4.1.1",
     "@types/react-color": "^3.0.11",

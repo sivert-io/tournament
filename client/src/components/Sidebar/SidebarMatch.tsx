@@ -1,5 +1,6 @@
 "use client";
 import { Match } from "@/types/match";
+import { useTheme } from "antd-style";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -28,8 +29,7 @@ function Content({ matchData }: { matchData: Match }) {
           </div>
         ))}
       </div>
-      <div className="flex-1 max-w-[2px] bg-base-4" />
-      <div className="flex flex-1 items-center justify-center p-4">
+      <div className="flex flex-1 items-center justify-center p-4 border-l border-white/5">
         {matchData.gameLogo && (
           <Image src={matchData.gameLogo} alt="" width={48} height={48} />
         )}
@@ -45,18 +45,27 @@ export function SidebarMatch({
   matchData: Match;
   clickAble?: boolean;
 }) {
+  const theme = useTheme();
+  const cardStyle: React.CSSProperties = {
+    background: theme.colorBgElevated,
+    border: "1px solid " + theme.colorBorder,
+    color: theme.colorTextBase,
+  };
+  const className = "flex text-sm rounded-lg";
+
   if (clickAble === undefined || clickAble)
     return (
       <Link
         href={`/matches/${matchData.id}`}
-        className="flex bg-base-3 text-sm text-gray-300 rounded-lg border-2 border-base-4"
+        className={className}
+        style={cardStyle}
       >
         <Content matchData={matchData} />
       </Link>
     );
 
   return (
-    <div className="flex bg-base-3 text-sm text-gray-300 rounded-lg border-2 border-base-4">
+    <div className={className} style={cardStyle}>
       <Content matchData={matchData} />
     </div>
   );

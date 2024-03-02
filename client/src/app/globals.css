@@ -3,5 +3,12 @@
 @tailwind utilities;
 
 .react-loading-skeleton {
-    line-height: unset !important;
+  line-height: unset !important;
+}
+
+@layer base {
+  svg {
+    display: inherit;
+    vertical-align: sub;
+  }
 }

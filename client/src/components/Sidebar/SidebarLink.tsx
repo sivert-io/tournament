@@ -1,4 +1,5 @@
 "use client";
+import { useTheme } from "antd-style";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
@@ -7,34 +8,26 @@ export function SidebarLink({
   href,
   children,
   Icon,
-  ActiveIcon,
 }: {
   href: string;
   children: React.ReactNode;
   Icon?: any;
-  ActiveIcon?: any;
 }) {
+  const theme = useTheme();
   const pathname = usePathname();
   const isPathActive =
     (href !== "/" && pathname.match(href)) || pathname === href;
 
-  function GrabIcon() {
-    if (isPathActive && ActiveIcon) {
-      return <ActiveIcon size={20} />;
-    } else if (Icon) {
-      return <Icon size={20} />;
-    }
-
-    return null;
-  }
-
   return (
     <Link
-      className={`flex text-gray-300 gap-2 items-center justify-start border-2 p-2 rounded-lg 
-      ${isPathActive ? "bg-base-3 border-base-4" : "border-transparent"}`}
+      style={{
+        background: isPathActive ? theme.colorBgElevated : "transparent",
+        color: theme.colorText,
+      }}
+      className="flex gap-2 items-center justify-start p-2 rounded-lg"
       href={href}
     >
-      <GrabIcon />
+      <Icon size={20} fill={isPathActive ? theme.colorText : "transparent"} />
       {children}
     </Link>
   );
