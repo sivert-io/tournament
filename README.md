@@ -17,6 +17,10 @@
       <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/badge/version-0.0.1-black.svg?colorA=21262d&colorB=21262d&style=flat">
       <img alt="Version" src="https://img.shields.io/badge/version-0.0.1-black.svg?colorA=f6f8fa&colorB=f6f8fa&style=flat" />
     </picture>
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/badge/Node.js-21-black.svg?colorA=21262d&colorB=21262d&style=flat">
+      <img alt="Version" src="https://img.shields.io/badge/Node.js-21-black.svg?colorA=f6f8fa&colorB=f6f8fa&style=flat" />
+    </picture>
   <a href="LICENSE">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/badge/license-MIT-blue?colorA=21262d&colorB=21262d&style=flat">
