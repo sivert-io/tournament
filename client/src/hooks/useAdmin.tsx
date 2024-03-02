@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useSteam } from "./useSteam";
 import { useSession } from "next-auth/react";
 
-export function useAdmin() {
+function useAdmin() {
   const [isAdmin, setIsAdmin] = useState(false);
   const [status, setStatus] = useState<"loading" | "finished">("loading");
   const [powerLevel, setPower] = useState(0);
@@ -33,3 +33,5 @@ export function useAdmin() {
     powerLevel,
   };
 }
+
+export { useAdmin };

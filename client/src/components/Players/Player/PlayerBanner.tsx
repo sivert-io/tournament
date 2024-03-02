@@ -7,7 +7,7 @@ import Image from "next/image";
 import React from "react";
 import Skeleton from "react-loading-skeleton";
 
-export default function PlayerBanner({
+export function PlayerBanner({
   name,
   bannerURL,
   avatarURL,
@@ -20,10 +20,12 @@ export default function PlayerBanner({
 }) {
   return (
     <div
-      className="w-full bg-center bg-cover"
+      className="w-full rounded-2xl"
       style={{
-        backgroundImage: bannerURL ? bannerURL : `url(/player/banner.webp)`,
-        backgroundColor: colors["base-3"],
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundImage: `url(${bannerURL})`,
+        backgroundColor: "black",
       }}
     >
       <div className="flex p-10 pb-14 pt-40 flex-col gap-4 w-full items-start">
@@ -32,12 +34,12 @@ export default function PlayerBanner({
             <Image
               src={avatarURL}
               alt=""
-              width={160}
-              height={160}
-              className="w-40 h-40 rounded-full"
+              width={128}
+              height={128}
+              className="rounded-full"
             />
           ) : (
-            <Skeleton circle width={160} height={160} />
+            <Skeleton circle width={128} height={128} />
           )}
           <div className="bg-black/40 p-4 w-80 flex flex-col gap-2 truncate text-ellipsis backdrop-blur rounded-lg">
             {name ? (

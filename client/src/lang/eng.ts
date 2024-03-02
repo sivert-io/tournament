@@ -39,6 +39,7 @@ export const eng: language = {
     player_kills: "Total kills",
   },
   generic: {
+    please_wait: "Please wait",
     back: "Back",
     next: "Next",
     not_found: "Could not find any tournament",

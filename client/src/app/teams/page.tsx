@@ -4,15 +4,17 @@ import { lang } from "@/lang";
 import { Button } from "antd";
 import React from "react";
 import { Plus } from "lucide-react";
-import Link from "next/link";
+import { ItemType } from "antd/es/breadcrumb/Breadcrumb";
+import { homeBreadcrumb } from "../page";
 
-export const metadata = {
-  title: `Tournament - ${lang.sidebar.teams}`,
-};
+export const teamsBreadcrumb = (useHref = true): ItemType => ({
+  title: lang.sidebar.teams,
+  href: useHref ? "/teams" : undefined,
+});
 
 export default function Page() {
   return (
-    <PageWrapper>
+    <PageWrapper breadCrumb={[homeBreadcrumb(), teamsBreadcrumb(false)]}>
       <div className="flex flex-col gap-4">
         <div className="flex items-center gap-4">
           <Title>{lang.sidebar.teams}</Title>

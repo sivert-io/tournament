@@ -1,10 +1,16 @@
 import { PageWrapper } from "@/components/PageWrapper/PageWrapper";
 import Title from "@/components/Title/Title";
 import { lang } from "@/lang";
+import { ItemType } from "antd/es/breadcrumb/Breadcrumb";
+
+export const homeBreadcrumb = (useHref = true): ItemType => ({
+  title: lang.sidebar.home,
+  href: useHref ? "/" : undefined,
+});
 
 export default function Home() {
   return (
-    <PageWrapper>
+    <PageWrapper breadCrumb={[homeBreadcrumb(false)]}>
       <div className="flex flex-col gap-4">
         <div className="flex flex-col gap-2">
           <Title>{lang.sidebar.home}</Title>

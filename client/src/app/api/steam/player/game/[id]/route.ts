@@ -21,7 +21,6 @@ export async function GET(
   const url = new URL(
     "http://api.steampowered.com/ISteamUserStats/GetUserStatsForGame/v0002"
   );
-  console.log(process.env.STEAM_SECRET);
 
   url.searchParams.set("key", process.env.STEAM_SECRET || "XXXXX");
   url.searchParams.set("steamid", id || "XXXXXX");

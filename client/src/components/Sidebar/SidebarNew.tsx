@@ -13,43 +13,46 @@ export function SidebarNew() {
 
   return (
     <Flexbox
-      className="relative h-full border-r"
+      className="h-full border-r"
       style={{
         borderColor: theme.colorBorder,
         background: theme.colorBorderBg,
+        minWidth: 256,
+        maxWidth: 256,
       }}
-      width={300}
+      width={256}
+      padding={8}
+      gap={8 * 4}
+      direction="vertical"
     >
-      <Flexbox padding={8} gap={8 * 4} direction="vertical">
-        <Flexbox direction="vertical" gap={8}>
-          <SidebarLink href="/" Icon={Gamepad2}>
-            {lang.sidebar.home}
-          </SidebarLink>
-          <SidebarLink href="/tournaments" Icon={Trophy}>
-            {lang.sidebar.tournaments}
-          </SidebarLink>
-          <SidebarLink href="/matches" Icon={Swords}>
-            {lang.sidebar.matches}
-          </SidebarLink>
-          <SidebarLink href="/teams" Icon={ShieldHalf}>
-            {lang.sidebar.teams}
-          </SidebarLink>
-          <SidebarLink href="/players" Icon={User}>
-            {lang.sidebar.players}
-          </SidebarLink>
-        </Flexbox>
-        <Flexbox direction="vertical" gap={8}>
-          <p style={{ color: theme.colorTextLabel }}>
-            {lang.sidebar.my_tournaments}
-          </p>
-          <SidebarTournament tournamentData={fakeTournament} />
-        </Flexbox>
-        <Flexbox direction="vertical" gap={8}>
-          <p style={{ color: theme.colorTextLabel }}>
-            {lang.sidebar.my_recent_matches}
-          </p>
-          <SidebarMatch matchData={fakeMatch} />
-        </Flexbox>
+      <Flexbox direction="vertical" gap={8}>
+        <SidebarLink href="/" Icon={Gamepad2}>
+          {lang.sidebar.home}
+        </SidebarLink>
+        <SidebarLink href="/tournaments" Icon={Trophy}>
+          {lang.sidebar.tournaments}
+        </SidebarLink>
+        <SidebarLink href="/matches" Icon={Swords}>
+          {lang.sidebar.matches}
+        </SidebarLink>
+        <SidebarLink href="/teams" Icon={ShieldHalf}>
+          {lang.sidebar.teams}
+        </SidebarLink>
+        <SidebarLink href="/players" Icon={User}>
+          {lang.sidebar.players}
+        </SidebarLink>
+      </Flexbox>
+      <Flexbox direction="vertical" gap={8}>
+        <p style={{ color: theme.colorTextLabel }}>
+          {lang.sidebar.my_tournaments}
+        </p>
+        <SidebarTournament tournamentData={fakeTournament} />
+      </Flexbox>
+      <Flexbox direction="vertical" gap={8}>
+        <p style={{ color: theme.colorTextLabel }}>
+          {lang.sidebar.my_recent_matches}
+        </p>
+        <SidebarMatch matchData={fakeMatch} />
       </Flexbox>
     </Flexbox>
   );

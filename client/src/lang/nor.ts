@@ -40,6 +40,7 @@ export const nor: language = {
     player_headshot_percentage: "Prosentandel hodeskudd",
   },
   generic: {
+    please_wait: "Vennligst vent",
     back: "Tilbake",
     next: "Neste",
     not_found: "Fant ingeting",

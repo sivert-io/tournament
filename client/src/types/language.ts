@@ -31,6 +31,7 @@ export type language = {
     border_thickness: string;
   };
   generic: {
+    please_wait: string;
     back: string;
     next: string;
     not_found: string;
