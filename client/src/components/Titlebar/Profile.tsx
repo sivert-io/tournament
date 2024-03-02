@@ -7,16 +7,16 @@ import React from "react";
 
 export function NavbarProfile({ steam }: { steam: SteamProfile }) {
   return (
-    <div className="flex gap-2 text-sm font-medium items-center">
-      <div className="flex flex-col items-end text-xs">
+    <div className="flex gap-2 text-sm items-center">
+      <div className="flex flex-col items-end">
         <Link
           href={`/players/${steam.steamid}`}
-          className="font-normal truncate w-16 text-end"
+          className="font-medium text-nowrap text-end"
         >
           {steam.personaname}
         </Link>
         <button
-          className="font-bold hover:underline underline-offset-2"
+          className="hover:underline underline-offset-2 text-xs"
           onClick={() => signOut()}
         >
           {lang.user.sign_out}

@@ -50,6 +50,7 @@ export type language = {
     sign_out: string;
   };
   notifications: {
+    tooltip: string;
     empty: string;
     invitation: string;
   };

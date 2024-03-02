@@ -8,6 +8,7 @@ import { Metadata } from "next";
 import { ThemeProvider } from "@/components/ThemeProvider/ThemeProvider";
 import { SidebarNew } from "@/components/Sidebar/SidebarNew";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
+import { ConvertLinkTags } from "@/components/ConvertLinkTags/ConvertLinkTags";
 
 const inter = Space_Grotesk({ subsets: ["latin"] });
 
@@ -26,21 +27,23 @@ export default function RootLayout({
   return (
     <html className="bg-base-1 text-white" lang="en">
       <body className={`${inter.className} w-screen h-screen flex`}>
-        <AntdRegistry>
-          <ThemeProvider>
-            <NextAuthSessionProvider>
-              <SkeletonTheme baseColor="#333" highlightColor="#555">
-                <main className="flex flex-col w-full h-full">
-                  <Titlebar />
-                  <div className="flex w-full h-full overflow-scroll">
-                    <SidebarNew />
-                    {children}
-                  </div>
-                </main>
-              </SkeletonTheme>
-            </NextAuthSessionProvider>
-          </ThemeProvider>
-        </AntdRegistry>
+        <ConvertLinkTags>
+          <AntdRegistry>
+            <ThemeProvider>
+              <NextAuthSessionProvider>
+                <SkeletonTheme baseColor="#333" highlightColor="#555">
+                  <main className="flex flex-col w-full h-full">
+                    <Titlebar />
+                    <div className="flex w-full h-full overflow-scroll">
+                      <SidebarNew />
+                      {children}
+                    </div>
+                  </main>
+                </SkeletonTheme>
+              </NextAuthSessionProvider>
+            </ThemeProvider>
+          </AntdRegistry>
+        </ConvertLinkTags>
       </body>
     </html>
   );

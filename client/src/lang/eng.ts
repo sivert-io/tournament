@@ -25,8 +25,9 @@ export const eng: language = {
     preview: "Preview",
   },
   notifications: {
+    tooltip: "New notification!",
     empty: "You have no alerts",
-    invitation: "You've been invited!",
+    invitation: "Invitation",
   },
   table: {
     player_main_team: "Main team",

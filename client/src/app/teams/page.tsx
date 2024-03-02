@@ -16,17 +16,16 @@ export default function Page() {
       <div className="flex flex-col gap-4">
         <div className="flex items-center gap-4">
           <Title>{lang.sidebar.teams}</Title>
-          <Link href="/teams/new">
-            <Button
-              size="small"
-              styles={{ icon: { marginRight: 4 } }}
-              icon={<Plus size={16} />}
-              type="primary"
-              tabIndex={-1}
-            >
-              {lang.teams.create_new_team}
-            </Button>
-          </Link>
+          <Button
+            href="/teams/new"
+            size="small"
+            styles={{ icon: { marginRight: 4 } }}
+            icon={<Plus size={16} />}
+            type="primary"
+            tabIndex={-1}
+          >
+            {lang.teams.create_new_team}
+          </Button>
         </div>
         <div className="flex flex-col gap-2">
           <h2 className="font-medium">{lang.teams.my_teams}</h2>

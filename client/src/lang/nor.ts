@@ -26,8 +26,9 @@ export const nor: language = {
     preview: "Forhåndsvisning",
   },
   notifications: {
+    tooltip: "Nytt varsel!",
     empty: "Du har ingen varsler",
-    invitation: "Du har blitt invitert!",
+    invitation: "Invitasjon",
   },
   table: {
     player_main_team: "Team",

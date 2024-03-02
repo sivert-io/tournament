@@ -11,7 +11,13 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <PageWrapper>
+    <PageWrapper
+      breadCrumb={[
+        { title: lang.sidebar.home, href: "/" },
+        { title: lang.sidebar.teams, href: "/teams" },
+        { title: lang.teams.create_new_team },
+      ]}
+    >
       <div className="flex flex-col gap-4 items-start justify-start">
         <Title>{lang.teams.create_new_team}</Title>
         <div className="flex gap-4">

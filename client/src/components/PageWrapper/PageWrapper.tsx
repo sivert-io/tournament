@@ -11,8 +11,8 @@ export function PageWrapper({
   breadCrumb?: ItemType[];
 }) {
   return (
-    <div className="flex flex-col w-full h-full gap-4 p-8">
-      {breadCrumb && <Breadcrumb separator=">" items={breadCrumb} />}
+    <div className="flex flex-col w-full h-full gap-4 py-8 px-64">
+      <Breadcrumb separator=">" items={breadCrumb} />
       {children}
     </div>
   );

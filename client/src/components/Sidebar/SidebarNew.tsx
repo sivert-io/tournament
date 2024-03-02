@@ -39,13 +39,15 @@ export function SidebarNew() {
           </SidebarLink>
         </Flexbox>
         <Flexbox direction="vertical" gap={8}>
-          <p className="">{lang.sidebar.my_tournaments}</p>
-          <SidebarTournament tournamentData={fakeTournament} />
+          <p style={{ color: theme.colorTextLabel }}>
+            {lang.sidebar.my_tournaments}
+          </p>
           <SidebarTournament tournamentData={fakeTournament} />
         </Flexbox>
         <Flexbox direction="vertical" gap={8}>
-          <p className="">{lang.sidebar.my_recent_matches}</p>
-          <SidebarMatch matchData={fakeMatch} />
+          <p style={{ color: theme.colorTextLabel }}>
+            {lang.sidebar.my_recent_matches}
+          </p>
           <SidebarMatch matchData={fakeMatch} />
         </Flexbox>
       </Flexbox>

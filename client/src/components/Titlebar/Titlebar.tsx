@@ -5,40 +5,50 @@ import { useSteam } from "@/hooks/useSteam";
 import { SignIn } from "../SignIn/SignIn";
 import { NavbarProfile } from "./Profile";
 import Skeleton from "react-loading-skeleton";
-import { RiSearch2Line, RiSettings3Line } from "@remixicon/react";
 import Notification from "./Notification/Notification";
+import { useTheme } from "antd-style";
+import { Button } from "antd";
+import { Search, Settings } from "lucide-react";
+import Image from "next/image";
 
 export function Titlebar() {
   const session = useSession();
   const steam = useSteam();
+  const theme = useTheme();
 
   return (
     <nav
-      className="w-full
-    bg-base-2
-    backdrop-blur
-    p-3
-    flex
-    items-center
-    justify-end
-    border-b-2
-    border-base-4
-    gap-4
-    "
+      className="w-full p-3 flex justify-end relative gap-4"
+      style={{
+        background: theme.colorBgContainer,
+        borderBottom: "1px solid " + theme.colorBorder,
+      }}
     >
-      <button className="p-2 hover:bg-base-1 rounded-lg">
-        <RiSearch2Line size={20} />
-      </button>
-      <div className="h-full w-0 border-r-2 border-base-3" />
+      <div className="absolute inset-0 flex items-center justify-start p-3 opacity-50">
+        <Image
+          src="/logo-dark.svg"
+          alt="Tournament Logo"
+          width={128}
+          height={0}
+        />
+      </div>
+      {/* <Button
+        icon={<Search size={16} />}
+        className="p-2 hover:bg-base-1 rounded-lg"
+      />
+      <div
+        style={{ width: 1, height: "100%", background: theme.colorBorder }}
+      /> */}
 
       {session.status === "unauthenticated" && <SignIn />}
 
       {session.status === "authenticated" && steam && (
         <>
           <Notification />
-          <button className="p-2 hover:bg-base-1 rounded-lg">
-            <RiSettings3Line size={20} />
-          </button>
+          <Button
+            icon={<Settings size={16} />}
+            className="p-2 hover:bg-base-1 rounded-lg"
+          />
           <NavbarProfile steam={steam} />
         </>
       )}
