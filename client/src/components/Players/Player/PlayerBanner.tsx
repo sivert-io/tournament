@@ -1,6 +1,5 @@
 import Title from "@/components/Title/Title";
 import { lang } from "@/lang";
-import { MappedLeetifyData } from "@/types/leetify";
 import { PlayerStats } from "@/types/stats";
 import { colors } from "@/utils/colors";
 import { replaceThousands } from "@/utils/number";
@@ -44,7 +43,7 @@ export default function PlayerBanner({
             {name ? (
               <Title>{name}</Title>
             ) : (
-              <Skeleton height={28} width="100%" />
+              <Skeleton height={32} width="100%" />
             )}
             {!!stats?.cs && (
               <p className="text-sm font-medium">
@@ -53,14 +52,14 @@ export default function PlayerBanner({
                 {lang.player.hours}
               </p>
             )}
-            {stats === undefined && <Skeleton height={18} width="50%" />}
+            {stats === undefined && <Skeleton height={20} width="50%" />}
             {!!stats?.leetify && (
               <p className="text-sm font-medium">
                 {lang.player.rating}:{" "}
                 {replaceThousands(stats.leetify.rating.toString(), " ")}
               </p>
             )}
-            {stats === undefined && <Skeleton height={18} width="50%" />}
+            {stats === undefined && <Skeleton height={20} width="50%" />}
           </div>
         </div>
       </div>

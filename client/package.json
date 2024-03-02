@@ -9,8 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@lobehub/ui": "^1.129.2",
     "@remixicon/react": "^4.1.1",
     "@types/react-color": "^3.0.11",
+    "antd": "^5.14.2",
+    "antd-style": "^3.6.1",
     "axios": "^1.6.7",
     "brackets-manager": "^1.6.4",
     "brackets-model": "^1.5.0",

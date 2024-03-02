@@ -1,51 +1,48 @@
-import { lang } from "@/lang";
+"use client";
 import { PlayerData } from "@/types/player";
-import Image from "next/image";
 import React from "react";
-import style from "./style.module.css";
-import Link from "next/link";
+import { Table as AntTable, TableColumnsType } from "antd";
+
+type dataType = {
+  key: number;
+  name: string;
+  team: string;
+  total_kills: number;
+  won_tournaments: number;
+};
+
+const columns: TableColumnsType<dataType> = [
+  {
+    title: "Rank",
+    dataIndex: "key",
+    key: "rank",
+    defaultSortOrder: "ascend",
+    sorter: (a: any, b: any) => a.key - b.key,
+  },
+  {
+    title: "Name",
+    dataIndex: "name",
+    key: "name",
+  },
+  {
+    title: "Team",
+    dataIndex: "team",
+    key: "team",
+  },
+  {
+    title: "Total kills",
+    dataIndex: "total_kills",
+    key: "total_kills",
+  },
+];
 
 export function Table({ data }: { data: PlayerData[] }) {
-  return (
-    <table className={style.table}>
-      <thead>
-        <tr>
-          <th>{lang.table.player_rank}</th>
-          <th>{lang.table.player_name}</th>
-          <th>{lang.table.player_main_team}</th>
-          <th>{lang.table.player_tournament_wins}</th>
-          <th>{lang.table.player_tournaments_participated}</th>
-        </tr>
-      </thead>
-      <tbody>
-        {data.map((player, i) => (
-          <tr key={i}>
-            <td>{i + 1}.</td>
-            <td>
-              <Link href={`/players/${player.steam.steamid}`}>
-                {player.steam.personaname}
-              </Link>
-            </td>
-            <td>
-              <Link
-                className="flex gap-2 items-center"
-                href={`/teams/${player.main_team.slug}`}
-              >
-                <Image
-                  width={24}
-                  height={24}
-                  className="w-6 h-6"
-                  alt=""
-                  src={player.main_team.logoURL || "/games/cs.svg"}
-                />
-                <span>{player.main_team.name}</span>
-              </Link>
-            </td>
-            <td>{player.won_tournaments}</td>
-            <td>{player.num_tournaments_participated}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  );
+  const dataSource: dataType[] = data.map((player, index) => ({
+    key: index + 1,
+    name: player.steam.personaname,
+    team: player.main_team.name,
+    total_kills: 0,
+    won_tournaments: player.won_tournaments,
+  }));
+  return <AntTable dataSource={dataSource} columns={columns} />;
 }
