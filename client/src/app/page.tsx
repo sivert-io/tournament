@@ -11,7 +11,7 @@ export default function Home() {
           <Title>{lang.sidebar.home}</Title>
           <h2 className="text-lg font-bold flex items-center justify-start gap-2">
             <span className="bg-primary rounded-full w-2 h-2" />
-            {lang.home.playing_right_now}{" "}
+            {lang.home.playing_right_now}
           </h2>
         </div>
       </div>

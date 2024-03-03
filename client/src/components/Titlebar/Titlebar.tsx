@@ -24,7 +24,7 @@ export function Titlebar() {
         borderBottom: "1px solid " + theme.colorBorder,
       }}
     >
-      <div className="absolute inset-0 flex items-center justify-start p-3 opacity-50">
+      <div className="absolute inset-0 flex items-center justify-start p-3 opacity-50 pointer-events-none">
         <Image
           src="/logo-dark.svg"
           alt="Tournament Logo"
