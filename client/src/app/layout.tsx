@@ -27,9 +27,9 @@ export default function RootLayout({
   return (
     <html className="bg-base-1 text-white" lang="en">
       <body className={`${inter.className} w-screen h-screen flex`}>
-        <ConvertLinkTags>
+        <ThemeProvider>
           <AntdRegistry>
-            <ThemeProvider>
+            <ConvertLinkTags>
               <NextAuthSessionProvider>
                 <SkeletonTheme baseColor="#333" highlightColor="#555">
                   <main className="flex flex-col w-full h-full">
@@ -41,9 +41,9 @@ export default function RootLayout({
                   </main>
                 </SkeletonTheme>
               </NextAuthSessionProvider>
-            </ThemeProvider>
+            </ConvertLinkTags>
           </AntdRegistry>
-        </ConvertLinkTags>
+        </ThemeProvider>
       </body>
     </html>
   );

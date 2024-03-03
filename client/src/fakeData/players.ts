@@ -26,7 +26,7 @@ export const fakePlayer1: PlayerData = {
     primaryclanid: "103582791474387820",
     timecreated: 1679020813,
     personastateflags: 0,
-    commentpermission: 1,
+    commentpermission: false,
   },
 } as const;
 
@@ -41,7 +41,7 @@ export const fakePlayer2: PlayerData = {
     communityvisibilitystate: 3,
     profilestate: 1,
     personaname: "Ymse",
-    commentpermission: 2,
+    commentpermission: false,
     profileurl: "https://steamcommunity.com/id/ymse/",
     avatar:
       "https://avatars.steamstatic.com/b3cc3c0414f83822222e69048b4fb67072aecd6f.jpg",
@@ -71,7 +71,7 @@ export const fakePlayer3: PlayerData = {
     communityvisibilitystate: 3,
     profilestate: 1,
     personaname: "Toxic bitch | Miebk",
-    commentpermission: 1,
+    commentpermission: false,
     profileurl: "https://steamcommunity.com/id/Miebk/",
     avatar:
       "https://avatars.steamstatic.com/e4c42240d904411f876d57eebe21cc756d8b9136.jpg",
@@ -102,7 +102,7 @@ export const fakePlayer4: PlayerData = {
     communityvisibilitystate: 3,
     profilestate: 1,
     personaname: "Bananisman",
-    commentpermission: 1,
+    commentpermission: false,
     profileurl: "https://steamcommunity.com/id/HarryPotato/",
     avatar:
       "https://avatars.steamstatic.com/73325967750aea4e52f5939fb703b599dacefebd.jpg",
@@ -132,7 +132,7 @@ export const fakePlayer5: PlayerData = {
     communityvisibilitystate: 3,
     profilestate: 1,
     personaname: "BerPer",
-    commentpermission: 1,
+    commentpermission: false,
     profileurl: "https://steamcommunity.com/id/thebeastoliver/",
     avatar:
       "https://avatars.steamstatic.com/498044cc07d4ed9c213ba5950f9f6c46e05013a2.jpg",
@@ -159,7 +159,7 @@ export const fakePlayer6: PlayerData = {
   teams: [fakeTeam3],
   won_tournaments: 4,
   steam: {
-    commentpermission: 0,
+    commentpermission: false,
     steamid: "76561198343096427",
     communityvisibilitystate: 3,
     profilestate: 1,

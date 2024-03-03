@@ -1,4 +1,5 @@
 import { Tournament } from "@/types/tournament";
+import { fakeTeam1, fakeTeam2 } from "./team";
 
 export const fakeTournament: Tournament = {
   id: 0,
@@ -6,15 +7,6 @@ export const fakeTournament: Tournament = {
   start: new Date(),
   end: new Date(2024, 6, 12),
   stages: [],
-  teams: [
-    {
-      name: "Bananismen",
-      logoURL: "/logo.svg",
-    },
-    {
-      name: "Team Simp",
-      logoURL: "/logo.svg",
-    },
-  ],
+  teams: [fakeTeam1, fakeTeam2],
   gameLogo: "/games/cs.svg",
 } as const;

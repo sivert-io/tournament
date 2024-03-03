@@ -9,7 +9,7 @@ export const colors = {
   primary: "#7060FF",
 } as const;
 
-export function convertHex(hexCode: string, opacity = 1, string?: boolean) {
+export function convertHex(hexCode: string, opacity = 1, string = false) {
   let hex = hexCode.replace("#", "");
   if (hex.length === 3) {
     hex = hex[0] + hex[0] + hex[1] + hex[1] + hex[2] + hex[2];
@@ -27,7 +27,6 @@ export function convertHex(hexCode: string, opacity = 1, string?: boolean) {
     b,
     a: opacity,
   };
-  if (string)
-    return `rgba(${r}, ${g}, ${b}, ${opacity})`
+  if (string) return `rgba(${r}, ${g}, ${b}, ${opacity})`;
   return rgba;
 }

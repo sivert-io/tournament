@@ -21,7 +21,7 @@ export function NewTeamModal() {
   const [file, setFile] = useState<File | null>();
   const [fileURL, setFileURL] = useState("");
   const [borderColor, setBorderColor] = useState<RGBColor>(
-    convertHex(colors.primary)
+    convertHex(colors.primary) as RGBColor
   );
   const [suggestedColors, setSuggestedColors] = useState<string[]>([
     colors.primary,
@@ -89,7 +89,7 @@ export function NewTeamModal() {
       setFileURL(URL.createObjectURL(file));
       extractColors(URL.createObjectURL(file))
         .then((foundColors) => {
-          setBorderColor(convertHex(foundColors[0].hex));
+          setBorderColor(convertHex(foundColors[0].hex) as RGBColor);
           setSuggestedColors([
             colors.primary,
             ...foundColors.map((color) => color.hex),
