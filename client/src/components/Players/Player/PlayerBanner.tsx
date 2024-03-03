@@ -22,7 +22,7 @@ export function PlayerBanner({
     <div
       className="w-full rounded-2xl"
       style={{
-        backgroundSize: "cover",
+        backgroundSize: "110%",
         backgroundPosition: "center",
         backgroundImage: `url(${bannerURL})`,
         backgroundColor: "black",

@@ -1,5 +1,5 @@
 import { CsNamedStat } from "@/types/cs";
-import { Leetify, MappedLeetifyData } from "@/types/leetify";
+import { Leetify } from "@/types/leetify";
 import { mapLeetifyData } from "@/utils/leetify";
 
 async function getLeetify(id: string) {

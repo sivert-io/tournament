@@ -1,6 +1,5 @@
 "use client";
 import { PlayerStats } from "@/types/stats";
-import axios from "axios";
 import { SteamProfile } from "next-auth-steam";
 import { useEffect, useState } from "react";
 
@@ -21,16 +20,16 @@ function usePlayerInfo(id: string) {
       let steamData = undefined;
       let gameData = undefined;
       let background = undefined;
-      await axios.get(`/api/steam/player/${id}`).then((res) => {
-        steamData = res.data;
+      await fetch(`/api/steam/player/${id}`).then(async (res) => {
+        steamData = await res.json();
       });
 
-      await axios.get(`/api/steam/player/game/${id}`).then((res) => {
-        gameData = res.data;
+      await fetch(`/api/steam/player/game/${id}`).then(async (res) => {
+        gameData = await res.json();
       });
 
-      await axios.get(`/api/steam/player/background/${id}`).then((res) => {
-        background = res.data.url;
+      await fetch(`/api/steam/player/background/${id}`).then(async (res) => {
+        background = (await res.json()).url;
       });
 
       setSteam(steamData);
