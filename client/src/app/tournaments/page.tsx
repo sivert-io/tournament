@@ -1,15 +1,9 @@
 import { PageWrapper } from "@/components/PageWrapper/PageWrapper";
 import Title from "@/components/Title/Title";
 import { lang } from "@/lang";
-import { ItemType } from "antd/es/breadcrumb/Breadcrumb";
+import { homeBreadcrumb, tournamentsBreadcrumb } from "@/utils/breadcrumbs";
 import Link from "next/link";
 import React from "react";
-import { homeBreadcrumb } from "../page";
-
-export const tournamentsBreadcrumb = (useHref = true): ItemType => ({
-  title: lang.sidebar.tournaments,
-  href: useHref ? "/tournaments" : undefined,
-});
 
 export default function Page() {
   return (

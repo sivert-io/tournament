@@ -1,12 +1,7 @@
 import { PageWrapper } from "@/components/PageWrapper/PageWrapper";
 import Title from "@/components/Title/Title";
 import { lang } from "@/lang";
-import { ItemType } from "antd/es/breadcrumb/Breadcrumb";
-
-export const homeBreadcrumb = (useHref = true): ItemType => ({
-  title: lang.sidebar.home,
-  href: useHref ? "/" : undefined,
-});
+import { homeBreadcrumb } from "@/utils/breadcrumbs";
 
 export default function Home() {
   return (

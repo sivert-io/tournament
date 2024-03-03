@@ -5,16 +5,30 @@
   "author": "Hansen, Sivert Gullberg <sivert-gullberg.hansen@norsk-tipping.no>",
   "license": "MIT",
   "scripts": {
+    "start": "run-p -l start:client start:server start:api start:docs",
     "dev": "run-p -l dev:client dev:server dev:api dev:docs",
     "install": "run-p -l install:client install:server install:api install:docs",
+    "build": "run-p -l build:client build:server build:api build:docs",
+
+    "start:client": "cd client && yarn start",
+    "start:server": "cd server && yarn start",
+    "start:api": "cd api && yarn start",
+    "start:docs": "cd docs && yarn start",
+
     "dev:client": "cd client && yarn dev",
     "dev:server": "cd server && yarn dev",
     "dev:api": "cd api && yarn dev",
     "dev:docs": "cd docs && yarn dev",
+
     "install:client": "cd client && yarn",
     "install:server": "cd server && yarn",
     "install:api": "cd api && yarn",
-    "install:docs": "cd docs && yarn"
+    "install:docs": "cd docs && yarn",
+
+    "build:client": "cd client && yarn build",
+    "build:server": "cd server && yarn build",
+    "build:docs": "cd docs && yarn build",
+    "build:api": "cd api && yarn build"
   },
   "devDependencies": {
     "npm-run-all": "^4.1.5"

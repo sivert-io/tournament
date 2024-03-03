@@ -5,12 +5,7 @@ import { lang } from "@/lang";
 import React from "react";
 import { fakePlayers } from "@/fakeData/players";
 import { ItemType } from "antd/es/breadcrumb/Breadcrumb";
-import { homeBreadcrumb } from "../page";
-
-export const playersBreadcrumb = (useHref = true): ItemType => ({
-  title: lang.sidebar.players,
-  href: useHref ? "/players" : undefined,
-});
+import { homeBreadcrumb, playersBreadcrumb } from "@/utils/breadcrumbs";
 
 export default function Page() {
   return (

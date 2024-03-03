@@ -4,13 +4,7 @@ import { lang } from "@/lang";
 import { Button } from "antd";
 import React from "react";
 import { Plus } from "lucide-react";
-import { ItemType } from "antd/es/breadcrumb/Breadcrumb";
-import { homeBreadcrumb } from "../page";
-
-export const teamsBreadcrumb = (useHref = true): ItemType => ({
-  title: lang.sidebar.teams,
-  href: useHref ? "/teams" : undefined,
-});
+import { homeBreadcrumb, teamsBreadcrumb } from "@/utils/breadcrumbs";
 
 export default function Page() {
   return (

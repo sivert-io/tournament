@@ -1,14 +1,8 @@
 import { PageWrapper } from "@/components/PageWrapper/PageWrapper";
 import Title from "@/components/Title/Title";
 import { lang } from "@/lang";
-import { ItemType } from "antd/es/breadcrumb/Breadcrumb";
 import React from "react";
-import { homeBreadcrumb } from "../page";
-
-export const matchesBreadcrumb = (useHref = true): ItemType => ({
-  title: lang.sidebar.matches,
-  href: useHref ? "/matches" : undefined,
-});
+import { homeBreadcrumb, matchesBreadcrumb } from "@/utils/breadcrumbs";
 
 export default function Page() {
   return (

@@ -3,14 +3,15 @@ import { NewTeamModal } from "@/components/Team/NewTeam/NewTeamModal";
 import { NewTeamRules } from "@/components/Team/NewTeam/NewTeamRules";
 import Title from "@/components/Title/Title";
 import { lang } from "@/lang";
+import { homeBreadcrumb, teamsBreadcrumb } from "@/utils/breadcrumbs";
 import React from "react";
 
 export default function Page() {
   return (
     <PageWrapper
       breadCrumb={[
-        { title: lang.sidebar.home, href: "/" },
-        { title: lang.sidebar.teams, href: "/teams" },
+        homeBreadcrumb(),
+        teamsBreadcrumb(),
         { title: lang.teams.create_new_team },
       ]}
     >
