@@ -5,10 +5,10 @@
   "author": "Hansen, Sivert Gullberg <sivert-gullberg.hansen@norsk-tipping.no>",
   "license": "MIT",
   "scripts": {
-    "start": "run-p -l start:client start:server start:api start:docs",
-    "dev": "run-p -l dev:client dev:server dev:api dev:docs",
-    "install": "run-p -l install:client install:server install:api install:docs",
-    "build": "run-p -l build:client build:server build:api build:docs",
+    "start": "run-p -l start:client start:server start:api",
+    "dev": "run-p -l dev:client dev:server dev:api",
+    "install": "run-p -l install:client install:server install:api",
+    "build": "run-p -l build:client build:server build:api",
 
     "start:client": "cd client && yarn start",
     "start:server": "cd server && yarn start",

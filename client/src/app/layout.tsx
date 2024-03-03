@@ -25,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html className="bg-base-1 text-white" lang="en">
+    <html lang="en">
       <body className={`${inter.className} w-screen h-screen flex`}>
         <ThemeProvider>
           <AntdRegistry>
