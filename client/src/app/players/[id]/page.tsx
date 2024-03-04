@@ -2,11 +2,12 @@
 import NotFound from "@/app/not-found";
 import { PageWrapper } from "@/components/PageWrapper/PageWrapper";
 import { PlayerBanner } from "@/components/Players/Player/PlayerBanner";
+import { Socials } from "@/components/Players/Player/Socials";
 import { usePlayerInfo } from "@/hooks/usePlayerInfo";
 import { homeBreadcrumb, playersBreadcrumb } from "@/utils/breadcrumbs";
 
 export default function Page({ params }: { params: { id: string } }) {
-  const { steam, gameStats, backgroundImage } = usePlayerInfo(params.id);
+  const { steam, gameStats, videoSrc } = usePlayerInfo(params.id);
 
   if (steam === null) return <NotFound />;
 
@@ -20,13 +21,14 @@ export default function Page({ params }: { params: { id: string } }) {
         },
       ]}
     >
-      <div className="flex flex-col w-full">
+      <div className="flex flex-col w-full gap-2">
         <PlayerBanner
           avatarURL={steam?.avatarfull}
           name={steam?.personaname}
           stats={gameStats}
-          bannerURL={backgroundImage}
+          bannerURL={videoSrc}
         />
+        <Socials steamid={steam?.steamid} />
       </div>
     </PageWrapper>
   );

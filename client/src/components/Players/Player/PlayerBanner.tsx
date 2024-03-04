@@ -1,8 +1,8 @@
 import Title from "@/components/Title/Title";
 import { lang } from "@/lang";
 import { PlayerStats } from "@/types/stats";
-import { colors } from "@/utils/colors";
 import { replaceThousands } from "@/utils/number";
+import { useTheme } from "antd-style";
 import Image from "next/image";
 import React from "react";
 import Skeleton from "react-loading-skeleton";
@@ -18,18 +18,24 @@ export function PlayerBanner({
   avatarURL?: string;
   stats: PlayerStats | undefined | null;
 }) {
+  const theme = useTheme();
   return (
     <div
-      className="w-full rounded-2xl"
-      style={{
-        backgroundSize: "110%",
-        backgroundPosition: "center",
-        backgroundImage: `url(${bannerURL})`,
-        backgroundColor: "black",
-      }}
+      className="w-full rounded-2xl relative overflow-hidden"
+      style={{ backgroundColor: theme.colorBgContainer }}
     >
+      <div className="absolute flex items-start justify-center inset-0 select-none pointer-events-none">
+        <video
+          className="w-full h-auto"
+          playsInline
+          autoPlay
+          muted
+          loop
+          src={bannerURL}
+        />
+      </div>
       <div className="flex p-10 pb-14 pt-40 flex-col gap-4 w-full items-start">
-        <div className="flex items-center justify-center gap-4 h-40">
+        <div className="flex items-center justify-center gap-4 h-40 z-10">
           {avatarURL ? (
             <Image
               src={avatarURL}

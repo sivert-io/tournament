@@ -11,9 +11,7 @@ function usePlayerInfo(id: string) {
     undefined
   );
 
-  const [backgroundImage, setBackgroundImage] = useState<undefined | string>(
-    undefined
-  );
+  const [videoSrc, setVideoSrc] = useState<undefined | string>(undefined);
 
   useEffect(() => {
     async function getData() {
@@ -29,17 +27,17 @@ function usePlayerInfo(id: string) {
       });
 
       await fetch(`/api/steam/player/background/${id}`).then(async (res) => {
-        background = (await res.json()).url;
+        background = (await res.json()).src;
       });
 
       setSteam(steamData);
       setGameStats(gameData);
-      setBackgroundImage(background);
+      setVideoSrc(background);
     }
     getData();
   }, [id]);
 
-  return { steam, gameStats, backgroundImage };
+  return { steam, gameStats, videoSrc };
 }
 
 export { usePlayerInfo };

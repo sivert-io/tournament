@@ -1,37 +1,34 @@
 import { load } from "cheerio";
+import steamID from "steamid";
 
 export async function GET(
   req: Request,
   { params }: { params: { id: string } }
 ) {
   const id = params.id;
-  const url = new URL("http://steamcommunity.com/profiles/" + id);
-  const response = await fetch(url);
 
-  if (response.ok) {
-    const body = await response.text();
+  try {
+    const bigIntdSteamId = new steamID(id).getBigIntID();
+    const convertedSteamId = Number(bigIntdSteamId & BigInt(0xffffffff));
+    const url = `https://steamcommunity.com/miniprofile/${convertedSteamId}`;
 
-    // Load the HTML into cheerio
-    const $ = load(body);
+    const response = await fetch(url);
 
-    // Find the element with the specified class name
-    const element = $("div.profile_page.has_profile_background");
-    const videoElement = $("video");
+    if (response.ok) {
+      const body = await response.text();
 
-    // If the element is found, extract the background URL from its style attribute
-    let background = videoElement.attr("poster");
+      // Load the HTML into cheerio
+      const $ = load(body);
 
-    if (element.length > 0) {
-      const styleAttribute = element.attr("style");
-      const regex = /background-image:\s*url\(\s*'([^']+)'\s*\)/;
-      if (styleAttribute) {
-        const match = styleAttribute.match(regex);
-        if (match) {
-          background = match[1];
-        }
-      }
+      const videoElement = $("source");
+
+      const src = videoElement.attr("src");
+
+      return Response.json({ src });
     }
-
-    return Response.json({ url: background });
+  } catch (e) {
+    console.error("Error converting steam id");
+    console.error(e);
+    return Response.json({ src: undefined });
   }
 }
