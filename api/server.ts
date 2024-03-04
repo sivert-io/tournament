@@ -11,12 +11,12 @@ const PORT: number = process.env.PORT ? parseInt(process.env.PORT, 10) : 8888;
 
 app
   .listen(PORT, "localhost", function () {
-    console.log(`API accessible on port ${PORT}.`);
+    console.log(`🔒 API accessible on port ${PORT}.`);
   })
   .on("error", (err: any) => {
     if (err.code === "EADDRINUSE") {
-      console.log("Error: address already in use");
+      console.error("Error: address already in use");
     } else {
-      console.log(err);
+      console.error(err);
     }
   });

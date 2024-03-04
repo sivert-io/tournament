@@ -9,4 +9,4 @@ initialize(httpServer);
 
 httpServer.listen(PORT);
 
-console.log(`Websocket accessible on port ${PORT}`);
+console.log(`🚀 Websocket accessible on port ${PORT}`);
