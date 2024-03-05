@@ -31,6 +31,7 @@ export type language = {
     border_thickness: string;
   };
   generic: {
+    team: string;
     please_wait: string;
     back: string;
     next: string;
@@ -56,6 +57,7 @@ export type language = {
     invitation: string;
   };
   sidebar: {
+    settings: string;
     home: string;
     players: string;
     teams: string;

@@ -1,17 +1,18 @@
 import { PageWrapper } from "@/components/PageWrapper/PageWrapper";
-import Title from "@/components/Title/Title";
+import { PageTitle } from "@/components/PageTitle/PageTitle";
 import { lang } from "@/lang";
 import { Button } from "antd";
 import React from "react";
 import { Plus } from "lucide-react";
 import { homeBreadcrumb, teamsBreadcrumb } from "@/utils/breadcrumbs";
+import Title from "antd/es/typography/Title";
 
 export default function Page() {
   return (
     <PageWrapper breadCrumb={[homeBreadcrumb(), teamsBreadcrumb(false)]}>
       <div className="flex flex-col gap-4">
         <div className="flex items-center gap-4">
-          <Title>{lang.sidebar.teams}</Title>
+          <PageTitle>{lang.sidebar.teams}</PageTitle>
           <Button
             href="/teams/new"
             size="small"
@@ -24,10 +25,10 @@ export default function Page() {
           </Button>
         </div>
         <div className="flex flex-col gap-2">
-          <h2 className="font-medium">{lang.teams.my_teams}</h2>
+          <Title level={2}>{lang.teams.my_teams}</Title>
         </div>
         <div className="flex flex-col gap-2">
-          <h2 className="font-medium">{lang.teams.all_teams}</h2>
+          <Title level={2}>{lang.teams.all_teams}</Title>
         </div>
       </div>
     </PageWrapper>

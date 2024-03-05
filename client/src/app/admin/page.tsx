@@ -1,6 +1,6 @@
 "use client";
 import { PageWrapper } from "@/components/PageWrapper/PageWrapper";
-import Title from "@/components/Title/Title";
+import { PageTitle } from "@/components/PageTitle/PageTitle";
 import { useAdmin } from "@/hooks/useAdmin";
 import { useSession } from "next-auth/react";
 import { redirect } from "next/navigation";
@@ -18,7 +18,7 @@ export default function Page() {
 
   return (
     <PageWrapper>
-      <Title>Admin</Title>
+      <PageTitle>Admin</PageTitle>
     </PageWrapper>
   );
 }

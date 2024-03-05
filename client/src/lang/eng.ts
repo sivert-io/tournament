@@ -39,6 +39,7 @@ export const eng: language = {
     player_kills: "Total kills",
   },
   generic: {
+    team: "Team",
     please_wait: "Please wait",
     back: "Back",
     next: "Next",
@@ -59,6 +60,7 @@ export const eng: language = {
     sign_out: "Sign out",
   },
   sidebar: {
+    settings: "Settings",
     matches: "Matches",
     home: "Home",
     players: "Players",

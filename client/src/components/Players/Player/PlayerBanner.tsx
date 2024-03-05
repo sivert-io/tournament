@@ -1,8 +1,9 @@
-import Title from "@/components/Title/Title";
+import { PageTitle } from "@/components/PageTitle/PageTitle";
 import { lang } from "@/lang";
 import { PlayerStats } from "@/types/stats";
 import { replaceThousands } from "@/utils/number";
 import { useTheme } from "antd-style";
+import Title from "antd/es/typography/Title";
 import Image from "next/image";
 import React from "react";
 import Skeleton from "react-loading-skeleton";
@@ -47,14 +48,16 @@ export function PlayerBanner({
           ) : (
             <Skeleton circle width={128} height={128} />
           )}
-          <div className="bg-black/40 p-4 w-80 flex flex-col gap-2 truncate text-ellipsis backdrop-blur rounded-lg">
+          <div className="bg-black/40 p-4 min-w-[20rem] max-w-[24rem] rounded-lg flex flex-col gap-2 truncate text-ellipsis backdrop-blur">
             {name ? (
-              <Title>{name}</Title>
+              <Title level={2} style={{ margin: 0 }}>
+                {name}
+              </Title>
             ) : (
               <Skeleton height={32} width="100%" />
             )}
             {!!stats?.cs && (
-              <p className="text-sm font-medium">
+              <p className="font-medium text-sm">
                 {lang.player.time_played}:{" "}
                 {Math.round((stats.cs.total_time_played || 0) / 3600)}{" "}
                 {lang.player.hours}
@@ -62,7 +65,7 @@ export function PlayerBanner({
             )}
             {stats === undefined && <Skeleton height={20} width="50%" />}
             {!!stats?.leetify && (
-              <p className="text-sm font-medium">
+              <p className="font-medium text-sm">
                 {lang.player.rating}:{" "}
                 {replaceThousands(stats.leetify.rating.toString(), " ")}
               </p>

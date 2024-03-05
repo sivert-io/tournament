@@ -40,6 +40,7 @@ export const nor: language = {
     player_headshot_percentage: "Prosentandel hodeskudd",
   },
   generic: {
+    team: "Lag",
     please_wait: "Vennligst vent",
     back: "Tilbake",
     next: "Neste",
@@ -60,6 +61,7 @@ export const nor: language = {
     sign_out: "Logg ut",
   },
   sidebar: {
+    settings: "Innstillinger",
     matches: "Kamper",
     home: "Hjem",
     players: "Spillere",
