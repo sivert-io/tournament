@@ -4,7 +4,9 @@ import { PageWrapper } from "@/components/PageWrapper/PageWrapper";
 import { PlayerBanner } from "@/components/Players/Player/PlayerBanner";
 import { Socials } from "@/components/Players/Player/Socials";
 import { usePlayerInfo } from "@/hooks/usePlayerInfo";
+import { lang } from "@/lang";
 import { homeBreadcrumb, playersBreadcrumb } from "@/utils/breadcrumbs";
+import Title from "antd/es/typography/Title";
 
 export default function Page({ params }: { params: { id: string } }) {
   const { steam, gameStats, videoSrc } = usePlayerInfo(params.id);
@@ -29,6 +31,7 @@ export default function Page({ params }: { params: { id: string } }) {
           bannerURL={videoSrc}
         />
         <Socials steamid={steam?.steamid} />
+        <Title level={3}>{lang.generic.team}</Title>
       </div>
     </PageWrapper>
   );

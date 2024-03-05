@@ -1,8 +1,8 @@
 import "./globals.css";
+import "react-loading-skeleton/dist/skeleton.css";
 import { Space_Grotesk } from "next/font/google";
 import NextAuthSessionProvider from "@/providers/SessionProvider";
 import { Titlebar } from "@/components/Titlebar/Titlebar";
-import "react-loading-skeleton/dist/skeleton.css";
 import { SkeletonTheme } from "react-loading-skeleton";
 import { Metadata } from "next";
 import { ThemeProvider } from "@/components/ThemeProvider/ThemeProvider";

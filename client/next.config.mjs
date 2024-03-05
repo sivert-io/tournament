@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  transpilePackages: ['@lobehub/ui'],
+  transpilePackages: ['@lobehub/ui', 'ant-design/nextjs-registry', 'antd'],
   images: {
     remotePatterns: [
       {
