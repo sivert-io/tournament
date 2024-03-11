@@ -9,6 +9,7 @@ import { ThemeProvider } from "@/components/ThemeProvider/ThemeProvider";
 import { SidebarNew } from "@/components/Sidebar/SidebarNew";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
 import { ConvertLinkTags } from "@/components/ConvertLinkTags/ConvertLinkTags";
+import { LayoutWrapper } from "@/components/PageWrapper/LayoutWrapper";
 
 const inter = Space_Grotesk({ subsets: ["latin"] });
 
@@ -32,12 +33,14 @@ export default function RootLayout({
             <ConvertLinkTags>
               <NextAuthSessionProvider>
                 <SkeletonTheme baseColor="#333" highlightColor="#555">
-                  <main className="flex flex-col w-full h-full">
-                    <Titlebar />
-                    <div className="flex w-full h-full items-start justify-start">
-                      <SidebarNew />
-                      {children}
-                    </div>
+                  <main className="flex w-full h-full items-center justify-center">
+                    <LayoutWrapper>
+                      <Titlebar />
+                      <div className="flex w-full h-full items-start justify-start">
+                        <SidebarNew />
+                        {children}
+                      </div>
+                    </LayoutWrapper>
                   </main>
                 </SkeletonTheme>
               </NextAuthSessionProvider>

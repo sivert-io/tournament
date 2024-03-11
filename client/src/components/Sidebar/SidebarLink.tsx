@@ -27,7 +27,7 @@ export function SidebarLink({
       className="flex gap-2 items-center justify-start p-2 rounded-lg"
       href={href}
     >
-      <Icon size={20} fill={isPathActive ? theme.colorText : "transparent"} />
+      <Icon size={20} />
       {children}
     </Link>
   );

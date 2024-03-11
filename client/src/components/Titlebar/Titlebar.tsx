@@ -18,48 +18,41 @@ export function Titlebar() {
 
   return (
     <nav
-      className="w-full p-3 flex justify-end relative gap-4"
+      className="w-full p-3 flex justify-between items-center"
       style={{
         background: theme.colorBgContainer,
         borderBottom: "1px solid " + theme.colorBorder,
       }}
     >
-      <div className="absolute inset-0 flex items-center justify-start p-3 opacity-50 pointer-events-none">
-        <Image
-          src="/logo-dark.svg"
-          alt="Tournament Logo"
-          width={128}
-          height={0}
-        />
-      </div>
-      {/* <Button
-        icon={<Search size={16} />}
-        className="p-2 hover:bg-base-1 rounded-lg"
+      <Image
+        src="/logo-dark.svg"
+        alt="Tournament Logo"
+        width={128}
+        height={0}
       />
-      <div
-        style={{ width: 1, height: "100%", background: theme.colorBorder }}
-      /> */}
+      <div className="flex gap-4 items-center justify-center">
+        {session.status === "unauthenticated" && <SignIn />}
 
-      {session.status === "unauthenticated" && <SignIn />}
+        {session.status === "authenticated" && steam && (
+          <>
+            <Notification />
+            <Button
+              icon={<Settings size={16} />}
+              className="p-2 hover:bg-base-1 rounded-lg"
+              href="/settings"
+            />
+            <NavbarProfile steam={steam} />
+          </>
+        )}
 
-      {session.status === "authenticated" && steam && (
-        <>
-          <Notification />
-          <Button
-            icon={<Settings size={16} />}
-            className="p-2 hover:bg-base-1 rounded-lg"
-          />
-          <NavbarProfile steam={steam} />
-        </>
-      )}
-
-      {session.status === "loading" && (
-        <>
-          <Skeleton height="100%" containerClassName="w-9 h-9 flex" />
-          <Skeleton height="100%" containerClassName="w-9 h-9 flex" />
-          <Skeleton height="100%" containerClassName="w-[108px] h-9 flex" />
-        </>
-      )}
+        {session.status === "loading" && (
+          <>
+            <Skeleton height="100%" containerClassName="w-9 h-9 flex" />
+            <Skeleton height="100%" containerClassName="w-9 h-9 flex" />
+            <Skeleton height="100%" containerClassName="w-[108px] h-9 flex" />
+          </>
+        )}
+      </div>
     </nav>
   );
 }
