@@ -5,7 +5,6 @@ import { Button } from "antd";
 import React from "react";
 import { Plus } from "lucide-react";
 import { homeBreadcrumb, teamsBreadcrumb } from "@/utils/breadcrumbs";
-import Title from "antd/es/typography/Title";
 
 export default function Page() {
   return (
@@ -23,12 +22,6 @@ export default function Page() {
           >
             {lang.teams.create_new_team}
           </Button>
-        </div>
-        <div className="flex flex-col gap-2">
-          <Title level={2}>{lang.teams.my_teams}</Title>
-        </div>
-        <div className="flex flex-col gap-2">
-          <Title level={2}>{lang.teams.all_teams}</Title>
         </div>
       </div>
     </PageWrapper>

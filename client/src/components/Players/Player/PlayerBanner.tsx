@@ -23,7 +23,7 @@ export function PlayerBanner({
   return (
     <div
       className="w-full rounded-2xl relative overflow-hidden"
-      style={{ backgroundColor: theme.colorBgContainer }}
+      style={{ backgroundColor: theme.colorBgBlur }}
     >
       <div className="absolute flex items-start justify-center inset-0 select-none pointer-events-none">
         <video
