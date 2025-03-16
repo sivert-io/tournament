@@ -7,7 +7,19 @@ export function Socials({ steamid }: { steamid?: string }) {
   if (!steamid) return null;
 
   return (
-    <div className="flex gap-2 justify-end">
+    <div className="flex gap-2">
+      <Button
+        type="text"
+        style={{
+          padding: 0,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+        target="_blank"
+        icon={<RiSteamFill size={20} />}
+        href={`https://steamcommunity.com/profiles/${steamid}`}
+      />
       <Button
         type="text"
         style={{
@@ -36,8 +48,10 @@ export function Socials({ steamid }: { steamid?: string }) {
           justifyContent: "center",
         }}
         target="_blank"
-        icon={<RiSteamFill size={20} />}
-        href={`https://steamcommunity.com/profiles/${steamid}`}
+        icon={
+          <Image src="/csstats.png" width={20} height={20} alt="csstats logo" />
+        }
+        href={`https://csstats.gg/player/${steamid}`}
       />
     </div>
   );

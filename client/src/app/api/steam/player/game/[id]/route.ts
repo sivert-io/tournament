@@ -1,6 +1,7 @@
 import { CsNamedStat } from "@/types/cs";
 import { Leetify } from "@/types/leetify";
 import { mapLeetifyData } from "@/utils/leetify";
+import { log } from "console";
 
 async function getLeetify(id: string) {
   const url = new URL(`https://api.leetify.com/api/profile/${id}`);
@@ -19,7 +20,7 @@ export async function GET(
 ) {
   const id = params.id;
   const url = new URL(
-    "http://api.steampowered.com/ISteamUserStats/GetUserStatsForGame/v0002"
+    "http://api.steampowered.com/ISteamUserStats/GetUserStatsForGame/v2"
   );
 
   url.searchParams.set("key", process.env.STEAM_SECRET || "XXXXX");
@@ -38,5 +39,6 @@ export async function GET(
 
     return Response.json(ret);
   }
+  console.log(response.statusText);
   return Response.json(null);
 }

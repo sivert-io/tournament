@@ -18,15 +18,27 @@ function usePlayerInfo(id: string) {
       let steamData = undefined;
       let gameData = undefined;
       let background = undefined;
-      await fetch(`/api/steam/player/${id}`).then(async (res) => {
+      await fetch(`/api/steam/player/${id}`, {
+        headers: {
+          "Cache-Control": "max-age=60", // Cache for 1 hour
+        },
+      }).then(async (res) => {
         steamData = await res.json();
       });
 
-      await fetch(`/api/steam/player/game/${id}`).then(async (res) => {
+      await fetch(`/api/steam/player/game/${id}`, {
+        headers: {
+          "Cache-Control": "max-age=60", // Cache for 1 hour
+        },
+      }).then(async (res) => {
         gameData = await res.json();
       });
 
-      await fetch(`/api/steam/player/background/${id}`).then(async (res) => {
+      await fetch(`/api/steam/player/background/${id}`, {
+        headers: {
+          "Cache-Control": "max-age=60", // Cache for 1 hour
+        },
+      }).then(async (res) => {
         background = (await res.json()).src;
       });
 

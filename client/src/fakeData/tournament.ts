@@ -8,5 +8,5 @@ export const fakeTournament: Tournament = {
   end: new Date(2024, 6, 12),
   stages: [],
   teams: [fakeTeam1, fakeTeam2],
-  gameLogo: "/games/cs.svg",
+  gameLogo: "/games/logo-cs2.png",
 } as const;

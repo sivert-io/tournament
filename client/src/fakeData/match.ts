@@ -6,5 +6,5 @@ export const fakeMatch: Match = {
   scores: [2, 0],
   winner: 0,
   teams: [fakeTeam1, fakeTeam2],
-  gameLogo: "/games/cs.svg",
+  gameLogo: "/games/logo-cs2.png",
 } as const;

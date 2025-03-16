@@ -10,7 +10,7 @@ export default function Page() {
   return (
     <PageWrapper breadCrumb={[homeBreadcrumb(), teamsBreadcrumb(false)]}>
       <div className="flex flex-col gap-4">
-        <div className="flex items-center gap-4">
+        <div className="flex items-end gap-4">
           <PageTitle>{lang.sidebar.teams}</PageTitle>
           <Button
             href="/teams/new"

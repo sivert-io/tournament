@@ -2,7 +2,7 @@ import { language } from "../types/language";
 
 export const nor: language = {
   player: {
-    time_played: "Tid spilt",
+    time_played: "Tid i spill",
     hours: "timer",
     rating: "Rang",
   },
@@ -18,7 +18,7 @@ export const nor: language = {
       "Pass på at lagnavnet er kult og respektfullt, og vær sikker på at bildet ikke er noe tull! 😉",
     my_teams: "Mine lag",
     all_teams: "Alle lag",
-    invite_only: "Krever invitasjon for å bli med",
+    invite_only: "Krever invitasjon",
     use_border: "Bruk kantfarge?",
     border_color: "Kantfarge",
     border_thickness: "Kanttykkelse",

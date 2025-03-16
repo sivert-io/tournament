@@ -2,7 +2,6 @@
 import NotFound from "@/app/not-found";
 import { PageWrapper } from "@/components/PageWrapper/PageWrapper";
 import { PlayerBanner } from "@/components/Players/Player/PlayerBanner";
-import { Socials } from "@/components/Players/Player/Socials";
 import { usePlayerInfo } from "@/hooks/usePlayerInfo";
 import { lang } from "@/lang";
 import { homeBreadcrumb, playersBreadcrumb } from "@/utils/breadcrumbs";
@@ -27,10 +26,10 @@ export default function Page({ params }: { params: { id: string } }) {
         <PlayerBanner
           avatarURL={steam?.avatarfull}
           name={steam?.personaname}
+          id={steam?.steamid}
           stats={gameStats}
           bannerURL={videoSrc}
         />
-        <Socials steamid={steam?.steamid} />
         <Title level={3}>{lang.generic.team}</Title>
       </div>
     </PageWrapper>

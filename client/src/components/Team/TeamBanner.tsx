@@ -1,26 +1,19 @@
-import { PageTitle } from "@/components/PageTitle/PageTitle";
-import { lang } from "@/lang";
-import { PlayerStats } from "@/types/stats";
-import { replaceThousands } from "@/utils/number";
 import { useTheme } from "antd-style";
 import Title from "antd/es/typography/Title";
 import Image from "next/image";
 import React from "react";
 import Skeleton from "react-loading-skeleton";
-import { Socials } from "./Socials";
 
-export function PlayerBanner({
+export function TeamBanner({
   name,
   bannerURL,
   avatarURL,
-  id,
-  stats,
+  editMode,
 }: {
   name?: string;
-  id?: string;
   bannerURL?: string;
   avatarURL?: string;
-  stats: PlayerStats | undefined | null;
+  editMode?: boolean;
 }) {
   const theme = useTheme();
   return (
@@ -48,7 +41,7 @@ export function PlayerBanner({
               height={128}
               className="rounded-full"
             />
-          ) : (
+          ) : editMode ? null : (
             <Skeleton circle width={128} height={128} />
           )}
           <div className="relative">
@@ -57,25 +50,9 @@ export function PlayerBanner({
                 <Title level={2} style={{ margin: 0 }}>
                   {name}
                 </Title>
-              ) : (
+              ) : editMode ? null : (
                 <Skeleton height={32} width="100%" />
               )}
-              <Socials steamid={id} />
-              {!!stats?.cs && (
-                <p className="font-medium text-sm">
-                  {lang.player.time_played}:{" "}
-                  {Math.round((stats.cs.total_time_played || 0) / 3600)}{" "}
-                  {lang.player.hours}
-                </p>
-              )}
-              {stats === undefined && <Skeleton height={20} width="50%" />}
-              {!!stats?.leetify && (
-                <p className="font-medium text-sm">
-                  {lang.player.rating}:{" "}
-                  {replaceThousands(stats.leetify.rating.toString(), " ")}
-                </p>
-              )}
-              {stats === undefined && <Skeleton height={20} width="50%" />}
             </div>
           </div>
         </div>

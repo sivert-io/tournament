@@ -46,10 +46,10 @@ const columns: TableColumnsType<dataType> = [
       >
         <Image
           alt=""
-          src={record.rest.main_team.logoURL || "/games/cs.svg"}
+          src={record.rest.main_team.logoURL || "/games/logo-cs2.png"}
           width={32}
           height={32}
-          className="w-8 h-8 rounded-full absolute"
+          className="w-8 h-8 rounded-full absolute object-contain object-center"
         />
         <p className="pl-12">{name}</p>
       </Link>

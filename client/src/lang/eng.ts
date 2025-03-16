@@ -2,7 +2,7 @@ import { language } from "../types/language";
 
 export const eng: language = {
   player: {
-    time_played: "Time played",
+    time_played: "Hours recorded",
     hours: "hours",
     rating: "Rating",
   },
@@ -17,7 +17,7 @@ export const eng: language = {
       "Make sure your team name is cool and respectful, and be sure the picture ain't no nonsense! 😉",
     my_teams: "My teams",
     all_teams: "All teams",
-    invite_only: "Invite required",
+    invite_only: "Invite only",
     use_border: "Enable border?",
     border_color: "Border color",
     border_thickness: "Border thickness",

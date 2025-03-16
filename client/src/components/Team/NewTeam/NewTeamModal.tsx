@@ -81,7 +81,7 @@ export function NewTeamModal() {
       },
       fakeTeam1,
     ],
-    gameLogo: "/games/cs.svg",
+    gameLogo: "/games/logo-cs2.png",
   };
 
   useEffect(() => {

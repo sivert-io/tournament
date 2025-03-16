@@ -1,17 +1,17 @@
 {
   "name": "docs",
-  "version": "0.0.0",
   "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "dev": "vocs dev",
-    "build": "vocs build",
-    "start": "vocs preview"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "@types/react": "latest",
-    "react": "latest",
-    "react-dom": "latest",
-    "typescript": "latest",
-    "vocs": "latest"
+    "@astrojs/starlight": "^0.31.1",
+    "astro": "^5.1.5",
+    "sharp": "^0.32.5"
   }
 }
